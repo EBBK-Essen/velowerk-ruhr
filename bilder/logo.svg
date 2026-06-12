@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="14" fill="#22272B"/>
+  <!-- Hinterrad -->
+  <circle cx="38" cy="78" r="20" fill="none" stroke="#F25C1F" stroke-width="6"/>
+  <!-- Vorderrad -->
+  <circle cx="86" cy="78" r="20" fill="none" stroke="#E9ECEE" stroke-width="6"/>
+  <!-- Rahmen -->
+  <path d="M38 78 L56 48 L80 48 L86 78 L62 78 Z" fill="none" stroke="#E9ECEE" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M56 48 L62 78" stroke="#E9ECEE" stroke-width="5"/>
+  <!-- Lenker und Sattel -->
+  <path d="M80 48 L76 38 L88 36" fill="none" stroke="#F25C1F" stroke-width="5" stroke-linecap="round"/>
+  <path d="M56 48 L52 38 L44 38" fill="none" stroke="#F25C1F" stroke-width="5" stroke-linecap="round"/>
+  <!-- Förderturm-Andeutung -->
+  <path d="M14 30 L24 12 L34 30" fill="none" stroke="#5B6770" stroke-width="3"/>
+  <circle cx="24" cy="12" r="3.5" fill="#F25C1F"/>
+</svg>

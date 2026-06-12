@@ -1,0 +1,199 @@
+/* ============================================================
+   VELOWERK RUHR GmbH – Stylesheet
+   Fiktives Modellunternehmen für Unterrichtszwecke (BWR)
+   Farben: Anthrazit (Kohle), Stahlgrau, Signalorange (Industrie)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root{
+  --anthrazit:#21282E;
+  --kohle:#16191C;
+  --stahl:#5B6770;
+  --hellstahl:#E9ECEE;
+  --linie:#D5DADD;
+  --signal:#F15B26;
+  --signal-dunkel:#C7461A;
+  --papier:#FBFBF9;
+  --weiss:#FFFFFF;
+  --gruen:#2E7D4F;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:'Source Sans 3',system-ui,sans-serif;
+  color:var(--anthrazit);
+  background:var(--papier);
+  line-height:1.55;
+  font-size:17px;
+}
+
+h1,h2,h3,.brand-name{font-family:'Saira Condensed',sans-serif;line-height:1.1;letter-spacing:.01em}
+h1{font-size:clamp(2.4rem,5vw,3.8rem);font-weight:700;text-transform:uppercase}
+h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:600;text-transform:uppercase;margin-bottom:.6em}
+h3{font-size:1.25rem;font-weight:600;margin-bottom:.4em}
+
+a{color:var(--signal-dunkel)}
+img{max-width:100%;display:block}
+
+/* ---------- Kopfzeile ---------- */
+header.site{
+  background:var(--anthrazit);
+  color:var(--weiss);
+  position:sticky;top:0;z-index:50;
+  border-bottom:4px solid var(--signal);
+}
+.kopf-inner{
+  max-width:1100px;margin:0 auto;padding:.6rem 1.2rem;
+  display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--weiss)}
+.brand img{height:44px;width:44px}
+.brand-name{font-size:1.45rem;font-weight:700;text-transform:uppercase}
+.brand-name span{color:var(--signal)}
+nav.haupt{margin-left:auto;display:flex;gap:.2rem;flex-wrap:wrap}
+nav.haupt a{
+  color:var(--hellstahl);text-decoration:none;font-weight:600;
+  padding:.45rem .75rem;border-radius:4px;font-size:.95rem;
+}
+nav.haupt a:hover{background:rgba(255,255,255,.1);color:var(--weiss)}
+nav.haupt a.aktiv{background:var(--signal);color:var(--weiss)}
+nav.haupt a.intern-link{border:1.5px dashed var(--stahl);margin-left:.4rem}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:
+    repeating-linear-gradient(-45deg,rgba(255,255,255,.025) 0 14px,transparent 14px 28px),
+    linear-gradient(115deg,var(--kohle) 0%,var(--anthrazit) 60%,#2E363C 100%);
+  color:var(--weiss);
+  padding:4.5rem 1.2rem 4rem;
+  border-bottom:6px solid var(--signal);
+}
+.hero-inner{max-width:1100px;margin:0 auto}
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--signal);margin-bottom:.8rem;
+}
+.hero p.untertitel{font-size:1.25rem;max-width:46ch;margin-top:1rem;color:var(--hellstahl)}
+.hero .kennzahlen{display:flex;gap:2.5rem;margin-top:2.2rem;flex-wrap:wrap}
+.hero .kz b{font-family:'Saira Condensed';font-size:2rem;color:var(--signal);display:block}
+.hero .kz span{font-size:.85rem;color:var(--hellstahl);text-transform:uppercase;letter-spacing:.06em}
+
+/* ---------- Layout ---------- */
+main{max-width:1100px;margin:0 auto;padding:2.5rem 1.2rem}
+section{margin-bottom:3rem}
+.zwei-spalten{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+@media(max-width:760px){.zwei-spalten{grid-template-columns:1fr}}
+
+.karte{
+  background:var(--weiss);border:1px solid var(--linie);border-radius:8px;
+  padding:1.4rem;box-shadow:0 1px 3px rgba(0,0,0,.05);
+}
+
+/* ---------- Tabellen ---------- */
+table{width:100%;border-collapse:collapse;background:var(--weiss);font-size:.95rem}
+caption{
+  caption-side:top;text-align:left;font-family:'Saira Condensed';font-size:1.15rem;
+  font-weight:600;text-transform:uppercase;padding:.5rem 0;
+}
+th,td{padding:.55rem .7rem;border:1px solid var(--linie);text-align:left;vertical-align:top}
+thead th{background:var(--anthrazit);color:var(--weiss);font-weight:600}
+tbody tr:nth-child(even){background:#F2F4F5}
+td.zahl,th.zahl{text-align:right;font-variant-numeric:tabular-nums}
+td.mono{font-family:'IBM Plex Mono',monospace;font-size:.82rem}
+tr.summe td{font-weight:700;border-top:2.5px solid var(--anthrazit);background:var(--hellstahl)}
+tr.zwischen td{font-weight:700;background:#FBEFE8}
+.tabelle-scroll{overflow-x:auto;border-radius:6px}
+
+/* ---------- Produktkarten ---------- */
+.produkt-gitter{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.4rem}
+.produkt{background:var(--weiss);border:1px solid var(--linie);border-radius:8px;overflow:hidden}
+.produkt img{aspect-ratio:3/2;object-fit:cover;width:100%}
+.produkt .pk{padding:1rem 1.1rem 1.2rem}
+.produkt .artnr{
+  font-family:'IBM Plex Mono',monospace;font-size:.75rem;background:var(--anthrazit);
+  color:var(--weiss);display:inline-block;padding:.15rem .5rem;border-radius:3px;margin-bottom:.4rem;
+}
+.produkt .preis{font-family:'Saira Condensed';font-size:1.5rem;font-weight:700;color:var(--signal-dunkel);margin-top:.4rem}
+.produkt .preis small{font-size:.75rem;color:var(--stahl);font-family:'Source Sans 3';font-weight:400}
+.kategorie-titel{
+  border-left:6px solid var(--signal);padding-left:.7rem;margin:2.2rem 0 1rem;
+}
+
+/* ---------- Team ---------- */
+.team-gitter{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1.4rem}
+.person{background:var(--weiss);border:1px solid var(--linie);border-radius:8px;overflow:hidden;text-align:center}
+.person img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.person .pi{padding:.9rem .8rem 1.1rem}
+.person .rolle{color:var(--stahl);font-size:.88rem}
+
+.organigramm{list-style:none}
+.organigramm>li{margin-bottom:1rem}
+.org-block{background:var(--weiss);border:1px solid var(--linie);border-left:5px solid var(--signal);border-radius:6px;padding:.7rem 1rem;margin-bottom:.4rem}
+.org-block b{display:block}
+.org-block span{color:var(--stahl);font-size:.9rem}
+.org-unter{list-style:none;margin-left:1.6rem}
+.org-unter .org-block{border-left-color:var(--stahl)}
+
+/* ---------- Stammdaten ---------- */
+.stammdaten th{width:32%;background:var(--hellstahl);color:var(--anthrazit)}
+
+/* ---------- Interner Bereich ---------- */
+.intern-banner{
+  background:repeating-linear-gradient(-45deg,var(--anthrazit) 0 18px,#2E363C 18px 36px);
+  color:var(--weiss);padding:2.5rem 1.2rem;border-bottom:6px solid var(--signal);
+}
+.intern-banner .hero-inner p{color:var(--hellstahl);max-width:60ch;margin-top:.6rem}
+.intern-nav{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.5rem 0 2.5rem}
+.intern-nav a{
+  text-decoration:none;background:var(--weiss);border:1.5px solid var(--anthrazit);
+  color:var(--anthrazit);padding:.45rem .9rem;border-radius:99px;font-weight:600;font-size:.92rem;
+}
+.intern-nav a:hover{background:var(--signal);border-color:var(--signal);color:var(--weiss)}
+
+.vertrag{
+  background:var(--weiss);border:1px solid var(--linie);border-radius:8px;
+  padding:2.2rem 2.4rem;font-size:.98rem;max-width:760px;
+}
+.vertrag h3{font-family:'IBM Plex Mono',monospace;font-size:1rem;text-transform:none;margin-top:1.4rem}
+.vertrag p{margin-bottom:.6rem}
+.vertrag .unterschrift{font-style:italic;margin-top:1.6rem}
+
+.hinweis{
+  background:#FFF6EF;border:1px solid #F0C9AF;border-left:5px solid var(--signal);
+  border-radius:6px;padding:.9rem 1.1rem;font-size:.92rem;margin:1rem 0;
+}
+
+/* ---------- Download-Liste ---------- */
+.downloads{list-style:none}
+.downloads li{margin-bottom:.5rem}
+.downloads a{font-weight:600}
+
+/* ---------- Fußzeile ---------- */
+footer.site{
+  background:var(--kohle);color:#AEB7BD;margin-top:3rem;
+  padding:2.2rem 1.2rem;font-size:.88rem;border-top:4px solid var(--signal);
+}
+.fuss-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem}
+@media(max-width:760px){.fuss-inner{grid-template-columns:1fr}}
+footer.site b{color:var(--weiss)}
+footer.site a{color:var(--hellstahl)}
+.fiktiv{
+  max-width:1100px;margin:1.6rem auto 0;padding-top:1rem;border-top:1px solid #333B41;
+  font-size:.8rem;color:#8A949B;
+}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-block;background:var(--signal);color:var(--weiss);text-decoration:none;
+  font-weight:700;padding:.7rem 1.4rem;border-radius:6px;margin-top:1.4rem;
+  font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:.04em;font-size:1.05rem;
+}
+.btn:hover{background:var(--signal-dunkel)}
+.btn.sekundaer{background:transparent;border:2px solid var(--weiss)}
+
+@media print{
+  header.site,footer.site,.intern-nav,.btn{display:none}
+  body{background:var(--weiss)}
+}
