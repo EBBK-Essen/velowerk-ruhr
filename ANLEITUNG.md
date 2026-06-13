@@ -71,3 +71,61 @@ Auf der Preislisten-Seite sind zwei Beispiel-Links bereits vorbereitet.
 - **Geschäftsführung:** Martin Frank
 - **Bilanzsumme Berichtsjahr:** 2.240.000 € · **Jahresüberschuss:** 420.000 €
 - **Kontensystematik:** Debitoren 24001 ff. · Kreditoren 44001 ff.
+
+## 6. VWL-Nutzung: Zuordnung zum Bildungsplan (Heft 44014/2018, Anlage C2 WuV)
+
+| Website-Element (Seite „Wirtschaft" / Intern) | Anforderungssituation VWL |
+|---|---|
+| Velowerk im Wirtschaftskreislauf (Sektoren-Tabelle, monetäre/reale Ströme) | AS 1.1, 1.4 |
+| Marktdaten + Elastizitäts-Beispiel (Flitzer vs. Emscher) | AS 1.2, 2.1 |
+| Wettbewerber-Tabelle, Fusions-Pressemeldung (Kartellamt/GWB) | AS 4.1 |
+| Konjunkturmonitor (Umsatz, BIP, Inflation, Geschäftsklima 2021–2025) | AS 3.3, 6.1 |
+| Produktionsfaktoren-Karten (Arbeit/Boden/Kapital, Faktorkombination) | AS 3.1 |
+| Außenhandel + Wechselkurs-Rechenbeispiel (USD-Import) | AS 2.2, 4.3 |
+| Pressemeldung EZB-Leitzinssenkung/Investition | AS 6.1, 6.3 |
+| Pressemeldung Tarifabschluss/Personalkosten | AS 5.2 |
+| Pressemeldung Pedelec-Förderung der Stadt Essen (Subvention) | AS 6.2 |
+| Inflationsdaten im Konjunkturmonitor, Preisliste (Preiserhöhungen) | AS 1.3, 4.2 |
+| Lagebericht 2025 (intern, PDF) – verbindet BWL-Jahresabschluss und VWL-Umfeld | AS 3.2, 3.3, 6.1 |
+
+Tipp: Vor jeder neuen Unterrichtsreihe kann eine passende neue Pressemitteilung
+auf der Wirtschaft-Seite ergänzt werden (wirtschaft.html, Abschnitt "presse").
+
+## 7. Neuausrichtung Produktion (Juni 2026)
+
+Velowerk positioniert sich als industrieller Serienfertiger ("Fahrradwerk", nicht mehr
+"Manufaktur"). Neue Sektion "Produktion" auf produkte.html#produktion mit Zuordnung
+Produktgruppe → Fertigungstyp/Organisationstyp (BWR, HF 3 Leistungserstellung):
+Fließfertigung (Volumenmodelle), Gruppenfertigung (MTB/Pedelecs), Reihenfertigung
+(Rahmenbau, inkl. neuer Lackieranlage), Kleinserie statt Einzelfertigung (»Margarethe«),
+Werkstattfertigung nur Prototypen/Service; dazu Vorrats- vs. Auftragsfertigung.
+
+## 8. Ausbau Juni 2026: Neue Seiten und Unterrichtsmaterial
+
+Neue Seiten: impressum.html, datenschutz.html, kontakt.html (Footer-Links auf allen
+Seiten), karriere.html (3 Stellenanzeigen -> Bewerbungstraining, HF 5 / Deutsch),
+nachhaltigkeit.html (externe Effekte, Kreislaufwirtschaft -> VWL/Kompetenzerwartung
+Teil 2 Bildungsplan), ueber-uns.html (Zeitstrahl 1996-2026 -> HF 1 Unternehmens-
+entwicklung). Hauptnavigation um "Karriere" erweitert.
+
+Interner Bereich neu:
+- dokumente/beleggeschaeftsgang.pdf: 6 Belege (Anfrage, Angebot, Bestellung, AB,
+  Lieferschein ohne Preise, Rechnung) - Vorfall: Debitor 1001 Zweirad Bergmann,
+  25x Art. 220 + 10x Art. 610, 27 % Rabatt, 19 % USt, 2 % Skonto.
+  Buchungssatz Rechnung: Forderungen 30.513,09 an Umsatzerloese 25.641,25
+  und Umsatzsteuer 4.871,84.
+- dokumente/briefvorlage-din5008.docx: Geschaeftsbrief-Vorlage (Word).
+
+## 9. Haendlerstimmen / Bewertungen (bewertungen.html)
+
+- B2B-konsistent: Bewertungen stammen von Handelskunden (Debitoren), nicht von
+  Endkunden -> Unterrichtsfrage B2B vs. B2C.
+- Pruefhinweis nach § 5b Abs. 3 UWG eingebaut (Echtheitspruefung von Bewertungen) ->
+  Aufhaenger fuer das Thema Fake-Bewertungen/Lauterkeitsrecht.
+- Schueler-Abgabe: Formular mit Sterne-Auswahl. Da GitHub Pages statisch ist, wird
+  die Bewertung (a) lokal im Browser gespeichert und unter "Neue Bewertungen"
+  angezeigt (nur auf dem jeweiligen Geraet) und (b) als formatierter Text zum
+  Kopieren ausgegeben -> Schueler senden ihn per Moodle/E-Mail an die Lehrkraft.
+- Veroeffentlichen: Gute Einsendungen als neue <div class="karte">-Bloecke im
+  Abschnitt "Geprueefte Bewertungen" in bewertungen.html einfuegen (bestehende
+  Karte kopieren, Texte ersetzen) und Datei neu zu GitHub hochladen.
