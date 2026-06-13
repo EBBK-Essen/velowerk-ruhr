@@ -6,6 +6,48 @@
 <title>Produkte – Velowerk Ruhr GmbH</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="bilder/logo.png">
+<style>
+/* ---- Trennband zwischen Eigenerzeugnisse und Handelswaren ---- */
+.sektionsbruch {
+  background: var(--anthrazit);
+  border-top: 4px solid var(--signal);
+  margin: 3.5rem -1.2rem 0;
+  padding: 1.6rem 1.2rem 1.4rem;
+  color: var(--weiss);
+}
+.sektionsbruch .eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .75rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--signal);
+  margin-bottom: .5rem;
+}
+.sektionsbruch h2 {
+  color: var(--weiss);
+  margin-bottom: .3rem;
+  border: none;
+  padding: 0;
+}
+.sektionsbruch p {
+  color: var(--hellstahl);
+  font-size: .95rem;
+  max-width: 60ch;
+  margin-top: .4rem;
+}
+/* ---- Hintergrund Handelswaren-Block ---- */
+.sektion-hw-inhalt {
+  background: var(--hellstahl);
+  margin: 0 -1.2rem;
+  padding: 2rem 1.2rem 2.5rem;
+}
+.sektion-hw-inhalt .produkt {
+  background: var(--weiss);
+}
+.sektion-hw-inhalt .hinweis {
+  background: var(--weiss);
+}
+</style>
 </head>
 <body>
 
@@ -75,10 +117,13 @@
     <div class="produkt"><img src="bilder/rad-620.jpg" alt="E-Mountainbike Modell Emscher"><div class="pk"><span class="artnr">Art.-Nr. 620</span><h3>E-Trail »Emscher«</h3><p>Sportives E-Mountainbike für Halden-Touren und Feierabendrunden.</p><div class="preis">2.850,00 € <small>UVP netto</small></div></div></div>
   </div>
 
-  <!-- ===== HANDELSWAREN ===== -->
-  <section id="handelswaren" style="margin-top:3rem">
-    <h2 class="kategorie-titel">Handelswaren <span style="font-size:.68rem;background:var(--signal);color:var(--weiss);padding:.15rem .45rem;border-radius:3px;vertical-align:middle;font-family:'IBM Plex Mono',monospace;letter-spacing:.05em;font-weight:500">ZUKAUF</span></h2>
-    <p style="margin-bottom:1.2rem;color:var(--stahl);font-size:.95rem">Zubehör und Bekleidung der Eigenmarke <i>RuhrPace</i> – zugekauft und unverändert weiterverkauft. Alle Preise UVP netto zzgl. USt.</p>
+  <!-- ===== TRENNBAND HANDELSWAREN ===== -->
+  <div class="sektionsbruch">
+    <div class="eyebrow">Zugekaufte Ware · Kein eigener Fertigungsprozess</div>
+    <h2>Handelswaren</h2>
+    <p>Zubehör und Bekleidung der Eigenmarke <i>RuhrPace</i> – zugekauft und unverändert weiterverkauft. Alle Preise UVP netto zzgl. USt.</p>
+  </div>
+  <div class="sektion-hw-inhalt" id="handelswaren">
     <div class="produkt-gitter">
       <div class="produkt"><img src="bilder/hw-710-helm.jpg" alt="Fahrradhelm Art.-Nr. 710"><div class="pk"><span class="artnr" style="background:var(--signal)">Art.-Nr. 710</span><h3>Fahrradhelm</h3><p>Leichter Rennhelm mit Ventilationssystem und Retentionssystem – ideal für sportliche Touren und den Stadtverkehr. Größen S–L.</p><div class="preis">49,00 € <small>UVP netto</small></div></div></div>
       <div class="produkt"><img src="bilder/hw-720-trikot.jpg" alt="Radtrikot RuhrPace Art.-Nr. 720"><div class="pk"><span class="artnr" style="background:var(--signal)">Art.-Nr. 720</span><h3>Radtrikot <i>RuhrPace</i></h3><p>Enganliegendes Funktionstrikot für Damen – Anthrazit/Orange, Reißverschluss, drei Rückentaschen. Größen XS–XL.</p><div class="preis">39,00 € <small>UVP netto</small></div></div></div>
@@ -89,9 +134,9 @@
       <div class="produkt"><img src="bilder/hw-760-pflege.jpg" alt="Pflegeset Art.-Nr. 760"><div class="pk"><span class="artnr" style="background:var(--signal)">Art.-Nr. 760</span><h3>Pflegeset</h3><p>3-teiliges Pflegeset: Kettenschmiermittel 100 ml, Reinigungsspray 200 ml, Kettenentfetter 100 ml – für Kette und Schaltwerk.</p><div class="preis">9,50 € <small>UVP netto</small></div></div></div>
     </div>
     <div class="hinweis" style="margin-top:1.2rem">
-      <b>BWR-Hinweis:</b> Handelswaren werden auf <b>Konto 1140 Handelswaren</b> (Bestandskonto) und <b>Konto 3400 Wareneinkauf</b> (Aufwandskonto) gebucht – im Unterschied zu Fertigerzeugnissen (Kto. 1200) und Rohstoffen (Kto. 1000). Sie verlassen das Unternehmen <i>unverändert</i>: kein Fertigungsprozess, keine innerbetriebliche Wertschöpfung.
+      <b>BWR-Hinweis:</b> Handelswaren werden beim Einkauf auf <b>Kto. 6080 Aufwendungen für Handelswaren</b> (Aufwand) und im Bestand auf <b>Kto. 2280 Waren (Handelswaren)</b> gebucht; Erlöse auf <b>Kto. 5100 Umsatzerlöse für Handelswaren</b> – im Unterschied zu Fertigerzeugnissen (Kto. 2200) und Rohstoffen (Kto. 2000). Sie verlassen das Unternehmen <i>unverändert</i>: kein Fertigungsprozess, keine innerbetriebliche Wertschöpfung.
     </div>
-  </section>
+  </div><!-- /.sektion-hw-inhalt -->
 
   <!-- ===== DIENSTLEISTUNGEN ===== -->
   <section>
