@@ -60,6 +60,7 @@ nav.haupt a{
 nav.haupt a:hover{background:rgba(255,255,255,.1);color:var(--weiss)}
 nav.haupt a.aktiv{background:var(--signal);color:var(--weiss)}
 nav.haupt a.intern-link{border:1.5px dashed var(--stahl);margin-left:.4rem}
+nav.haupt a.hf-link{border:1.5px solid var(--signal);margin-left:.4rem}
 
 /* ---------- Hero ---------- */
 .hero{
@@ -164,6 +165,35 @@ tr.zwischen td{font-weight:700;background:#FBEFE8}
   background:#FFF6EF;border:1px solid #F0C9AF;border-left:5px solid var(--signal);
   border-radius:6px;padding:.9rem 1.1rem;font-size:.92rem;margin:1rem 0;
 }
+
+/* ---------- Beschaffung (HF 2) ---------- */
+.hf-banner{
+  background:
+    linear-gradient(115deg,rgba(22,25,28,.96),rgba(33,40,46,.94)),
+    repeating-linear-gradient(-45deg,rgba(255,255,255,.03) 0 14px,transparent 14px 28px);
+  color:var(--weiss);padding:3rem 1.2rem;border-bottom:6px solid var(--signal);
+}
+.hf-banner .hero-inner p{color:var(--hellstahl);max-width:68ch;margin-top:.8rem}
+.hf-nav{display:flex;gap:.5rem;flex-wrap:wrap;margin:0 0 2.5rem}
+.hf-nav a{background:var(--weiss);border:1.5px solid var(--anthrazit);border-radius:99px;color:var(--anthrazit);font-weight:600;padding:.48rem .95rem;text-decoration:none}
+.hf-nav a:hover,.hf-nav a.aktiv{background:var(--signal);border-color:var(--signal);color:var(--weiss)}
+.statuszeile{display:flex;gap:.65rem;flex-wrap:wrap;margin:1.2rem 0 0}
+.status-badge{background:rgba(255,255,255,.1);border:1px solid var(--stahl);border-radius:4px;color:var(--hellstahl);font-family:'IBM Plex Mono',monospace;font-size:.78rem;padding:.3rem .55rem}
+.status-badge.offen{border-color:var(--signal);color:#FFC0A9}
+.datenkarten{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
+.datenkarte{background:var(--weiss);border:1px solid var(--linie);border-top:5px solid var(--signal);border-radius:8px;padding:1.25rem;text-decoration:none;color:var(--anthrazit);box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.datenkarte:hover{transform:translateY(-2px);box-shadow:0 5px 14px rgba(0,0,0,.1)}
+.datenkarte .code{font-family:'IBM Plex Mono',monospace;color:var(--signal-dunkel);font-size:.76rem;font-weight:600}
+.datenkarte h3{margin-top:.3rem}
+.quellenhinweis{background:#EEF3F5;border-left:5px solid var(--stahl);padding:1rem 1.1rem;border-radius:6px;margin:1.2rem 0;font-size:.94rem}
+.ampel{display:inline-block;width:.7rem;height:.7rem;border-radius:50%;margin-right:.35rem;background:var(--stahl)}
+.ampel.hoch{background:#B33A2B}.ampel.mittel{background:#D49316}.ampel.niedrig{background:var(--gruen)}
+.lieferant-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem}
+.lieferant{background:var(--weiss);border:1px solid var(--linie);border-radius:8px;padding:1.2rem}
+.lieferant .nr{font-family:'IBM Plex Mono',monospace;color:var(--signal-dunkel);font-size:.78rem}
+.lieferant dl{display:grid;grid-template-columns:8.5rem 1fr;gap:.25rem .7rem;margin-top:.7rem;font-size:.92rem}
+.lieferant dt{font-weight:700}.lieferant dd{margin:0}
+@media(max-width:900px){nav.haupt{margin-left:0}.kopf-inner{align-items:flex-start}.lieferant dl{grid-template-columns:1fr}.lieferant dt{margin-top:.35rem}}
 
 /* ---------- Download-Liste ---------- */
 .downloads{list-style:none}
