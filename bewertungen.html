@@ -92,12 +92,13 @@
   <section id="abgeben">
     <h2>Bewertung abgeben</h2>
     <p>Sie sind Handelskunde (oder testen unsere Räder gerade im Unterricht)? Dann freuen wir uns über Ihre Bewertung:</p>
+    <p class="hinweis"><b>Nur für den Unterricht:</b> Trag bitte nur einen Fantasienamen oder deinen Vornamen ein, keinen Nachnamen und keine echte Klasse. Deine Einträge bleiben in diesem Browser auf diesem Gerät. An Schulrechnern können andere sie sehen. Abgeben kannst du deinen Eintrag über Moodle. Lösch deine Einträge am Ende mit dem Knopf „Meine Einträge auf diesem Gerät löschen“.</p>
 
     <form id="bw-form" onsubmit="return bwAbsenden(event)" style="margin-top:.8rem">
       <label for="bw-name"><b>Name</b></label>
-      <input class="formfeld" id="bw-name" maxlength="60" required placeholder="Vor- und Nachname">
-      <label for="bw-firma"><b>Firma / Klasse</b></label>
-      <input class="formfeld" id="bw-firma" maxlength="60" required placeholder="z. B. Radhaus Beispiel GmbH oder Klasse BH25A">
+      <input class="formfeld" id="bw-name" maxlength="60" required placeholder="Fantasiename oder Vorname">
+      <label for="bw-firma"><b>Firma (Fantasiefirma)</b></label>
+      <input class="formfeld" id="bw-firma" maxlength="60" required placeholder="z. B. Radhaus Beispiel GmbH (Fantasiefirma)">
       <label><b>Ihre Bewertung</b></label>
       <div class="sterne-wahl" id="bw-sterne" style="margin:.2rem 0 .9rem">
         <label data-w="1">★</label><label data-w="2">★</label><label data-w="3">★</label><label data-w="4">★</label><label data-w="5">★</label>
@@ -118,6 +119,7 @@
     <div id="bw-neu-bereich" style="display:none;margin-top:1.6rem">
       <h2>Neue Bewertungen <span style="font-size:.8rem;color:var(--stahl);font-weight:normal">(nur auf diesem Gerät sichtbar – Veröffentlichung nach redaktioneller Prüfung)</span></h2>
       <div id="bw-liste"></div>
+      <button class="btn-orange" type="button" onclick="bwLoeschen()">Meine Einträge auf diesem Gerät löschen</button>
     </div>
   </section>
 
@@ -206,7 +208,7 @@ function bwAbsenden(ev) {
   try { localStorage.setItem("velowerk_bewertungen", JSON.stringify(daten)); } catch (e) {}
   document.getElementById("bw-kopie").value =
     "Bewertung für Velowerk Ruhr GmbH\n" +
-    "Name: " + b.name + "\nFirma/Klasse: " + b.firma + "\nSterne: " + b.sterne + " von 5\n" +
+    "Name: " + b.name + "\nFirma: " + b.firma + "\nSterne: " + b.sterne + " von 5\n" +
     "Datum: " + b.datum + "\nText: " + b.text;
   document.getElementById("bw-danke").style.display = "block";
   document.getElementById("bw-form").reset();
@@ -222,6 +224,15 @@ function bwKopieren() {
   t.select();
   try { navigator.clipboard.writeText(t.value); } catch (e) { document.execCommand("copy"); }
   document.getElementById("bw-kopiert").style.display = "inline";
+}
+
+function bwLoeschen() {
+  if (!confirm("Meine Einträge auf diesem Gerät löschen?")) return;
+  try { localStorage.removeItem("velowerk_bewertungen"); } catch (e) {}
+  document.getElementById("bw-liste").innerHTML = "";
+  document.getElementById("bw-kopie").value = "";
+  document.getElementById("bw-neu-bereich").style.display = "none";
+  document.getElementById("bw-danke").style.display = "none";
 }
 
 bwLaden();
