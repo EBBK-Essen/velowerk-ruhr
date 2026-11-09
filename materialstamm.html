@@ -1,8 +1,31 @@
 <!DOCTYPE html>
-<html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Materialstamm – Velowerk Ruhr GmbH</title><link rel="stylesheet" href="styles.css"><link rel="icon" href="bilder/logo.png"></head><body>
-<header class="site"><div class="kopf-inner"><a class="brand" href="index.html"><img src="bilder/logo.png" alt="Logo Velowerk Ruhr GmbH"><span class="brand-name">Velowerk <span>Ruhr</span></span></a><nav class="haupt"><a href="index.html">Start</a><a href="produkte.html">Produkte</a><a href="preisliste.html">Preisliste</a><a href="team.html">Team</a><a href="wirtschaft.html">Wirtschaft</a><a href="news.html">News</a><a href="karriere.html">Karriere</a><a href="stammdaten.html">Stammdaten</a><a href="beschaffung.html" class="hf-link aktiv">Beschaffung (HF 2)</a><a href="intern.html" class="intern-link">Intern</a></nav></div></header>
+<html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Materialstamm – Velowerk Ruhr GmbH</title><link rel="stylesheet" href="styles.css"><link rel="icon" type="image/png" sizes="88x88" href="bilder/logo-88.png">
+<script src="menue.js" defer></script></head><body>
+<a class="sprunglink" href="#inhalt">Zum Inhalt</a>
+<header class="site">
+  <div class="kopf-inner">
+    <a class="brand" href="index.html">
+      <picture><source type="image/webp" srcset="bilder/logo-88.webp 88w, bilder/logo-176.webp 176w" sizes="44px"><img src="bilder/logo-88.png" srcset="bilder/logo-88.png 88w, bilder/logo-176.png 176w" sizes="44px" width="44" height="44" alt="Logo Velowerk Ruhr GmbH"></picture>
+      <span class="brand-name">Velowerk <span>Ruhr</span></span>
+    </a>
+    <button type="button" class="menue-knopf" popovertarget="hauptmenue" aria-controls="hauptmenue" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menü</span></button>
+    <nav class="haupt" id="hauptmenue" popover aria-label="Hauptmenü">
+      <a href="index.html">Start</a>
+      <a href="produkte.html">Produkte</a>
+      <a href="preisliste.html">Preisliste</a>
+      <a href="team.html">Team</a>
+      <a href="wirtschaft.html">Wirtschaft</a>
+      <a href="news.html">News</a>
+      <a href="karriere.html">Karriere</a>
+      <a href="stammdaten.html">Stammdaten</a>
+      <a href="unternehmen-hf1.html" class="hf-link">Unternehmen (HF 1)</a>
+      <a href="beschaffung.html" class="hf-link aktiv" aria-current="true">Beschaffung (HF 2)</a>
+      <a href="intern.html" class="intern-link">Intern</a>
+    </nav>
+  </div>
+</header>
 <div class="hf-banner"><div class="hero-inner"><div class="eyebrow">Einkauf · Stammdaten</div><h1>Materialstamm</h1><p>Ausgewählte Beschaffungspositionen der Velowerk Ruhr GmbH. Die ausgewiesenen Einstandspreise/Bezugspreise gelten je angegebener Mengeneinheit ab 01.01.2026.</p><div class="statuszeile"><span class="status-badge">16 aktive Materialien</span><span class="status-badge">Preisstand 2026</span><span class="status-badge">Währung: EUR</span></div></div></div>
-<main><nav class="hf-nav"><a href="beschaffung.html">Übersicht</a><a class="aktiv" href="materialstamm.html">Materialstamm</a><a href="verbrauch.html">Bedarf &amp; Verbrauch</a><a href="lieferanten.html">Lieferanten</a><a href="angebote.html">Angebote</a><a href="bestandsplanung.html">Bestandsplanung</a><a href="make-or-buy.html">Make or Buy</a><a href="lagerberichte.html">Lagerberichte</a><a href="kontenplan.html">Kontenplan</a></nav>
+<main id="inhalt"><nav class="hf-nav"><a href="beschaffung.html">Übersicht</a><a class="aktiv" href="materialstamm.html" aria-current="page">Materialstamm</a><a href="verbrauch.html">Bedarf &amp; Verbrauch</a><a href="lieferanten.html">Lieferanten</a><a href="angebote.html">Angebote</a><a href="bestandsplanung.html">Bestandsplanung</a><a href="make-or-buy.html">Make or Buy</a><a href="lagerberichte.html">Lagerberichte</a><a href="kontenplan.html">Kontenplan</a></nav>
 <div class="quellenhinweis"><b>Datenhinweis:</b> Der Einstandspreis/Bezugspreis ist kein berechneter Jahresverbrauchswert. Jahresmengen stehen im Verbrauchsbericht. Für Lieferbedingungen und qualitative Informationen gelten die Lieferantenprofile.</div>
 <section><div class="tabelle-scroll"><table><caption>Aktive Beschaffungspositionen · Preisstand 2026</caption><thead><tr><th>Material-Nr.</th><th>Bezeichnung</th><th>Materialart</th><th>Einheit</th><th>Standardlieferant</th><th class="zahl">Einstandspreis/Bezugspreis je Einheit</th><th>Versorgungsrelevanz</th></tr></thead><tbody>
 <tr><td class="mono">M-101</td><td>Aluminiumrohre 7005</td><td>Rohstoff</td><td>kg</td><td class="mono">6002</td><td class="zahl">6,80 €</td><td><span class="ampel hoch"></span>hoch</td></tr>
@@ -22,4 +45,34 @@
 <tr><td class="mono">M-401</td><td>Fahrrad-Versandkarton</td><td>Hilfsstoff</td><td>Stück</td><td class="mono">6008</td><td class="zahl">5,20 €</td><td><span class="ampel mittel"></span>mittel</td></tr>
 <tr><td class="mono">M-402</td><td>Montage- und Kettenschmierstoff</td><td>Betriebsstoff</td><td>Liter</td><td class="mono">6012</td><td class="zahl">7,80 €</td><td><span class="ampel niedrig"></span>niedrig</td></tr>
 </tbody></table></div></section>
-</main><footer class="site"><div class="fuss-inner"><div><b>Velowerk Ruhr GmbH</b><br>Abteilung Einkauf · Datenstand 2026</div><div><b>Beschaffung</b><br><a href="beschaffung.html">Übersicht</a><br><a href="verbrauch.html">Verbrauch</a><br><a href="lieferanten.html">Lieferanten</a></div><div><b>Unternehmen</b><br><a href="stammdaten.html">Stammdaten</a><br><a href="index.html">Startseite</a></div></div><div class="fiktiv">Fiktive Unternehmensdaten für Unterrichtszwecke. Die Seite enthält Ausgangsdaten, keine Aufgabenlösungen.<br>© 2026 Martin Frank</div></footer></body></html>
+</main>
+<footer class="site">
+  <div class="fuss-inner">
+    <div>
+      <b>Velowerk Ruhr GmbH</b><br>
+      Helenenstraße 12 · 45143 Essen<br>
+      Telefon 0201 8645-0 · Telefax 0201 8645-211<br>
+      info@velowerk-ruhr.de<br><br>
+      <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="kontakt.html">Kontakt</a>
+    </div>
+    <div>
+      <b>Seiten</b><br>
+      <a href="produkte.html">Produkte</a><br>
+      <a href="preisliste.html">Preisliste</a><br>
+      <a href="team.html">Team &amp; Organigramm</a><br>
+      <a href="ueber-uns.html">Über uns</a><br>
+      <a href="nachhaltigkeit.html">Nachhaltigkeit</a><br>
+      <a href="bewertungen.html">Händlerstimmen</a>
+    </div>
+    <div>
+      <b>Unternehmen</b><br>
+      <a href="wirtschaft.html">Markt &amp; Wirtschaft</a><br>
+      <a href="news.html">News &amp; Pressespiegel</a><br>
+      <a href="stammdaten.html">Stammdaten</a><br>
+      <a href="intern.html">Interner Bereich</a><br>
+      <a href="karriere.html">Karriere</a>
+    </div>
+  </div>
+  <div class="fiktiv">Die Velowerk Ruhr GmbH ist ein frei erfundenes Modellunternehmen für den Unterricht in Betriebswirtschaftslehre mit Rechnungswesen und in Volkswirtschaftslehre. Alle Personen, Bankverbindungen, Zahlen und Geschäftsvorfälle des Unternehmens sind fiktiv. Ähnlichkeiten mit real existierenden Unternehmen sind zufällig und nicht beabsichtigt. Verweise auf die EZB, das Statistische Bundesamt, Zölle und andere Ereignisse beziehen sich auf reale Entwicklungen.<br>© 2026 Martin Frank · Konzept, Texte, Daten und Gestaltung sind urheberrechtlich geschützt. Nutzung für Unterrichtszwecke gestattet; jede weitergehende Verwendung nur mit Genehmigung des Urhebers.</div>
+</footer>
+</body></html>

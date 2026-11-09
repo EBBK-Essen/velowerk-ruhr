@@ -5,17 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Impressum – Velowerk Ruhr GmbH</title>
 <link rel="stylesheet" href="styles.css">
-<link rel="icon" href="bilder/logo.png">
+<link rel="icon" type="image/png" sizes="88x88" href="bilder/logo-88.png">
+<script src="menue.js" defer></script>
 </head>
 <body>
 
+<a class="sprunglink" href="#inhalt">Zum Inhalt</a>
 <header class="site">
   <div class="kopf-inner">
     <a class="brand" href="index.html">
-      <img src="bilder/logo.png" alt="Logo Velowerk Ruhr GmbH">
+      <picture><source type="image/webp" srcset="bilder/logo-88.webp 88w, bilder/logo-176.webp 176w" sizes="44px"><img src="bilder/logo-88.png" srcset="bilder/logo-88.png 88w, bilder/logo-176.png 176w" sizes="44px" width="44" height="44" alt="Logo Velowerk Ruhr GmbH"></picture>
       <span class="brand-name">Velowerk <span>Ruhr</span></span>
     </a>
-    <nav class="haupt">
+    <button type="button" class="menue-knopf" popovertarget="hauptmenue" aria-controls="hauptmenue" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menü</span></button>
+    <nav class="haupt" id="hauptmenue" popover aria-label="Hauptmenü">
       <a href="index.html">Start</a>
       <a href="produkte.html">Produkte</a>
       <a href="preisliste.html">Preisliste</a>
@@ -24,6 +27,7 @@
       <a href="news.html">News</a>
       <a href="karriere.html">Karriere</a>
       <a href="stammdaten.html">Stammdaten</a>
+      <a href="unternehmen-hf1.html" class="hf-link">Unternehmen (HF 1)</a>
       <a href="beschaffung.html" class="hf-link">Beschaffung (HF 2)</a>
       <a href="intern.html" class="intern-link">Intern</a>
     </nav>
@@ -38,7 +42,7 @@
   </div>
 </div>
 
-<main>
+<main id="inhalt">
 
   <section class="quellenhinweis" id="anbieter">
     <h2>Hinweis zu dieser Unterrichtsseite</h2>
@@ -93,11 +97,12 @@
       <b>Unternehmen</b><br>
       <a href="wirtschaft.html">Markt &amp; Wirtschaft</a><br>
       <a href="news.html">News &amp; Pressespiegel</a><br>
+      <a href="stammdaten.html">Stammdaten</a><br>
       <a href="intern.html">Interner Bereich</a><br>
       <a href="karriere.html">Karriere</a>
     </div>
   </div>
-  <div class="fiktiv">Die Velowerk Ruhr GmbH ist ein frei erfundenes Modellunternehmen für Unterrichtszwecke im Fach Betriebswirtschaftslehre mit Rechnungswesen sowie Volkswirtschaftslehre. Alle Personen, Daten, Marktzahlen und Geschäftsvorfälle sind fiktiv; Ähnlichkeiten mit real existierenden Unternehmen sind zufällig und nicht beabsichtigt.<br>© 2026 Martin Frank · Konzept, Texte, Daten und Gestaltung sind urheberrechtlich geschützt. Nutzung für Unterrichtszwecke gestattet; jede weitergehende Verwendung nur mit Genehmigung des Urhebers.</div>
+  <div class="fiktiv">Die Velowerk Ruhr GmbH ist ein frei erfundenes Modellunternehmen für den Unterricht in Betriebswirtschaftslehre mit Rechnungswesen und in Volkswirtschaftslehre. Alle Personen, Bankverbindungen, Zahlen und Geschäftsvorfälle des Unternehmens sind fiktiv. Ähnlichkeiten mit real existierenden Unternehmen sind zufällig und nicht beabsichtigt. Verweise auf die EZB, das Statistische Bundesamt, Zölle und andere Ereignisse beziehen sich auf reale Entwicklungen.<br>© 2026 Martin Frank · Konzept, Texte, Daten und Gestaltung sind urheberrechtlich geschützt. Nutzung für Unterrichtszwecke gestattet; jede weitergehende Verwendung nur mit Genehmigung des Urhebers.</div>
 </footer>
 
 </body>

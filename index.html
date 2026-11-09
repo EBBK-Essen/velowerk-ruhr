@@ -5,18 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Velowerk Ruhr GmbH – Fahrradwerk aus Essen</title>
 <link rel="stylesheet" href="styles.css">
-<link rel="icon" href="bilder/logo.png">
+<link rel="icon" type="image/png" sizes="88x88" href="bilder/logo-88.png">
+<script src="menue.js" defer></script>
 </head>
 <body>
 
+<a class="sprunglink" href="#inhalt">Zum Inhalt</a>
 <header class="site">
   <div class="kopf-inner">
     <a class="brand" href="index.html">
-      <img src="bilder/logo.png" alt="Logo Velowerk Ruhr GmbH">
+      <picture><source type="image/webp" srcset="bilder/logo-88.webp 88w, bilder/logo-176.webp 176w" sizes="44px"><img src="bilder/logo-88.png" srcset="bilder/logo-88.png 88w, bilder/logo-176.png 176w" sizes="44px" width="44" height="44" alt="Logo Velowerk Ruhr GmbH"></picture>
       <span class="brand-name">Velowerk <span>Ruhr</span></span>
     </a>
-    <nav class="haupt">
-      <a href="index.html" class="aktiv">Start</a>
+    <button type="button" class="menue-knopf" popovertarget="hauptmenue" aria-controls="hauptmenue" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menü</span></button>
+    <nav class="haupt" id="hauptmenue" popover aria-label="Hauptmenü">
+      <a href="index.html" class="aktiv" aria-current="page">Start</a>
       <a href="produkte.html">Produkte</a>
       <a href="preisliste.html">Preisliste</a>
       <a href="team.html">Team</a>
@@ -47,7 +50,7 @@
   </div>
 </div>
 
-<main>
+<main id="inhalt">
   <section class="zwei-spalten">
     <div>
       <h2>Unternehmensporträt</h2>
@@ -55,9 +58,10 @@
       <p style="margin-top:.7rem">2003 trat der Unternehmer <b>Dr. Stefan Roloff</b> als zweiter Gesellschafter in die GmbH ein und brachte das Kapital für die Modernisierung der Fertigung mit. Seit 2015 führt <b>Martin Frank</b> als Geschäftsführer die Geschäfte. Heute beschäftigt das Unternehmen 38 Mitarbeiterinnen und Mitarbeiter, darunter drei Auszubildende.</p>
       <p style="margin-top:.7rem">Hauptziel der Velowerk Ruhr GmbH ist die Produktion und der Absatz hochwertiger, langlebiger Fahrräder mit Gewinn. Die meisten Rahmen und Gabeln fertigt das Unternehmen selbst; Komponenten wie Schaltungen, Antriebe und Sättel werden von spezialisierten Lieferanten aus dem In- und Ausland bezogen.</p>
     </div>
-    <div>
-      <img src="bilder/werk.jpg" alt="Werksgebäude der Velowerk Ruhr GmbH in Essen-Altendorf" style="border-radius:8px;border:1px solid var(--linie)">
+    <div class="bild-mit-nachweis">
+      <img src="bilder/werk.jpg" alt="Werksgebäude der Velowerk Ruhr GmbH in Essen-Altendorf">
       <p style="font-size:.85rem;color:var(--stahl);margin-top:.4rem">Das Werksgelände an der Helenenstraße in Essen-Altendorf.</p>
+      <p class="bildnachweis">Foto KI-generiert</p>
     </div>
   </section>
 
@@ -66,7 +70,7 @@
     <div class="zwei-spalten">
       <div class="karte">
         <h3>Eigenfertigung im Kern</h3>
-        <p>Rahmen aus Stahl und Aluminium entstehen in Reihenfertigung – vom Zuschnitt über das Schweißen bis zur neuen Lackieranlage. Die Endmontage der Volumenmodelle läuft getaktet am Fließband, Pedelecs entstehen in flexiblen Fertigungsinseln.</p>
+        <p>Rahmen aus Stahl und Aluminium entstehen in Reihenfertigung – vom Zuschnitt über das Schweißen bis zur Lackierung. Eine neue Lackieranlage ist geplant, die Entscheidung ist vertagt. Die Endmontage der Volumenmodelle läuft getaktet am Fließband, Pedelecs entstehen in flexiblen Fertigungsinseln.</p>
       </div>
       <div class="karte">
         <h3>Vertrieb über den Fachhandel</h3>
@@ -104,12 +108,14 @@
     </div>
     <div>
       <b>Unternehmen</b><br>
+      <a href="wirtschaft.html">Markt &amp; Wirtschaft</a><br>
+      <a href="news.html">News &amp; Pressespiegel</a><br>
       <a href="stammdaten.html">Stammdaten</a><br>
       <a href="intern.html">Interner Bereich</a><br>
       <a href="karriere.html">Karriere</a>
     </div>
   </div>
-  <div class="fiktiv">Die Velowerk Ruhr GmbH ist ein frei erfundenes Modellunternehmen für Unterrichtszwecke im Fach Betriebswirtschaftslehre mit Rechnungswesen. Alle Personen, Daten, Bankverbindungen und Geschäftsvorfälle sind fiktiv; Ähnlichkeiten mit real existierenden Unternehmen sind zufällig und nicht beabsichtigt.<br>© 2026 Martin Frank · Konzept, Texte, Daten und Gestaltung sind urheberrechtlich geschützt. Nutzung für Unterrichtszwecke gestattet; jede weitergehende Verwendung nur mit Genehmigung des Urhebers.</div>
+  <div class="fiktiv">Die Velowerk Ruhr GmbH ist ein frei erfundenes Modellunternehmen für den Unterricht in Betriebswirtschaftslehre mit Rechnungswesen und in Volkswirtschaftslehre. Alle Personen, Bankverbindungen, Zahlen und Geschäftsvorfälle des Unternehmens sind fiktiv. Ähnlichkeiten mit real existierenden Unternehmen sind zufällig und nicht beabsichtigt. Verweise auf die EZB, das Statistische Bundesamt, Zölle und andere Ereignisse beziehen sich auf reale Entwicklungen.<br>© 2026 Martin Frank · Konzept, Texte, Daten und Gestaltung sind urheberrechtlich geschützt. Nutzung für Unterrichtszwecke gestattet; jede weitergehende Verwendung nur mit Genehmigung des Urhebers.</div>
 </footer>
 
 </body>

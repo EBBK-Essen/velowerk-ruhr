@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Produkte – Velowerk Ruhr GmbH</title>
 <link rel="stylesheet" href="styles.css">
-<link rel="icon" href="bilder/logo.png">
+<link rel="icon" type="image/png" sizes="88x88" href="bilder/logo-88.png">
+<script src="menue.js" defer></script>
 <style>
 /* ---- Trennband zwischen Eigenerzeugnisse und Handelswaren ---- */
 .sektionsbruch {
-  background: var(--anthrazit);
+  background: var(--kohle); /* Kohle statt Anthrazit: Orange-Eyebrow 5,3 : 1 */
   border-top: 4px solid var(--signal);
   margin: 3.5rem -1.2rem 0;
   padding: 1.6rem 1.2rem 1.4rem;
@@ -51,21 +52,24 @@
 </head>
 <body>
 
+<a class="sprunglink" href="#inhalt">Zum Inhalt</a>
 <header class="site">
   <div class="kopf-inner">
     <a class="brand" href="index.html">
-      <img src="bilder/logo.png" alt="Logo Velowerk Ruhr GmbH">
+      <picture><source type="image/webp" srcset="bilder/logo-88.webp 88w, bilder/logo-176.webp 176w" sizes="44px"><img src="bilder/logo-88.png" srcset="bilder/logo-88.png 88w, bilder/logo-176.png 176w" sizes="44px" width="44" height="44" alt="Logo Velowerk Ruhr GmbH"></picture>
       <span class="brand-name">Velowerk <span>Ruhr</span></span>
     </a>
-    <nav class="haupt">
+    <button type="button" class="menue-knopf" popovertarget="hauptmenue" aria-controls="hauptmenue" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menü</span></button>
+    <nav class="haupt" id="hauptmenue" popover aria-label="Hauptmenü">
       <a href="index.html">Start</a>
-      <a href="produkte.html" class="aktiv">Produkte</a>
+      <a href="produkte.html" class="aktiv" aria-current="page">Produkte</a>
       <a href="preisliste.html">Preisliste</a>
       <a href="team.html">Team</a>
       <a href="wirtschaft.html">Wirtschaft</a>
       <a href="news.html">News</a>
       <a href="karriere.html">Karriere</a>
       <a href="stammdaten.html">Stammdaten</a>
+      <a href="unternehmen-hf1.html" class="hf-link">Unternehmen (HF 1)</a>
       <a href="beschaffung.html" class="hf-link">Beschaffung (HF 2)</a>
       <a href="intern.html" class="intern-link">Intern</a>
     </nav>
@@ -80,7 +84,7 @@
   </div>
 </div>
 
-<main>
+<main id="inhalt">
 
   <h2 class="kategorie-titel">City-Räder</h2>
   <div class="produkt-gitter">
@@ -117,6 +121,7 @@
     <div class="produkt"><img src="bilder/rad-610.jpg" alt="E-City-Rad Modell Zollverein"><div class="pk"><span class="artnr">Art.-Nr. 610</span><h3>E-City »Zollverein«</h3><p>Komfortables City-Pedelec mit Mittelmotor und 500-Wh-Akku.</p><div class="preis">2.450,00 € <small>UVP netto</small></div></div></div>
     <div class="produkt"><img src="bilder/rad-620.jpg" alt="E-Mountainbike Modell Emscher"><div class="pk"><span class="artnr">Art.-Nr. 620</span><h3>E-Trail »Emscher«</h3><p>Sportives E-Mountainbike für Halden-Touren und Feierabendrunden.</p><div class="preis">2.850,00 € <small>UVP netto</small></div></div></div>
   </div>
+  <p class="bildnachweis">Produktfotos der Eigenerzeugnisse KI-generiert</p>
 
   <!-- ===== TRENNBAND HANDELSWAREN ===== -->
   <div class="sektionsbruch">
@@ -126,14 +131,15 @@
   </div>
   <div class="sektion-hw-inhalt" id="handelswaren">
     <div class="produkt-gitter">
-      <div class="produkt"><img src="bilder/hw-710-helm.jpg" alt="Fahrradhelm Art.-Nr. 710"><div class="pk"><span class="artnr" style="background:var(--signal)">Art.-Nr. 710</span><h3>Fahrradhelm</h3><p>Leichter Rennhelm mit Ventilationssystem und Retentionssystem – ideal für sportliche Touren und den Stadtverkehr. Größen S–L.</p><div class="preis">49,00 € <small>UVP netto</small></div></div></div>
-      <div class="produkt"><img src="bilder/hw-720-trikot.jpg" alt="Radtrikot RuhrPace Art.-Nr. 720"><div class="pk"><span class="artnr" style="background:var(--signal)">Art.-Nr. 720</span><h3>Radtrikot <i>RuhrPace</i></h3><p>Enganliegendes Funktionstrikot für Damen – Anthrazit/Orange, Reißverschluss, drei Rückentaschen. Größen XS–XL.</p><div class="preis">39,00 € <small>UVP netto</small></div></div></div>
-      <div class="produkt"><img src="bilder/hw-721-jacke.jpg" alt="Regenjacke RuhrPace Art.-Nr. 721"><div class="pk"><span class="artnr" style="background:var(--signal)">Art.-Nr. 721</span><h3>Regenjacke <i>RuhrPace</i></h3><p>Wasserdichte Softshell-Jacke für Herren – winddicht, atmungsaktiv, reflektierende Elemente an Ärmelbündchen und Saum. Größen S–XXL.</p><div class="preis">69,00 € <small>UVP netto</small></div></div></div>
-      <div class="produkt"><img src="bilder/hw-730-schloss.jpg" alt="Faltschloss Art.-Nr. 730"><div class="pk"><span class="artnr" style="background:var(--signal)">Art.-Nr. 730</span><h3>Faltschloss</h3><p>Kompaktes 6-Glied-Faltschloss mit 8-mm-Stahlgliedern – sicher und leicht transportierbar. Inkl. Halterung und 2 Schlüsseln.</p><div class="preis">35,00 € <small>UVP netto</small></div></div></div>
-      <div class="produkt"><img src="bilder/hw-740-brille.jpg" alt="Sport-Sonnenbrille Art.-Nr. 740"><div class="pk"><span class="artnr" style="background:var(--signal)">Art.-Nr. 740</span><h3>Sport-Sonnenbrille</h3><p>Rahmenlose Sportbrille mit Wechselgläsern (getönt, klar, verspiegelt) – UV-400-Schutz, leichter TR90-Rahmen.</p><div class="preis">29,00 € <small>UVP netto</small></div></div></div>
-      <div class="produkt"><img src="bilder/hw-750-werkzeug.jpg" alt="Werkzeugset Art.-Nr. 750"><div class="pk"><span class="artnr" style="background:var(--signal)">Art.-Nr. 750</span><h3>Werkzeugset</h3><p>12-teiliges Fahrrad-Werkzeugset in Rolltasche: Inbusschlüssel, Kettennieter, Reifenheber, Torx – für unterwegs und zuhause.</p><div class="preis">24,00 € <small>UVP netto</small></div></div></div>
-      <div class="produkt"><img src="bilder/hw-760-pflege.jpg" alt="Pflegeset Art.-Nr. 760"><div class="pk"><span class="artnr" style="background:var(--signal)">Art.-Nr. 760</span><h3>Pflegeset</h3><p>3-teiliges Pflegeset: Kettenschmiermittel 100 ml, Reinigungsspray 200 ml, Kettenentfetter 100 ml – für Kette und Schaltwerk.</p><div class="preis">9,50 € <small>UVP netto</small></div></div></div>
+      <div class="produkt"><img src="bilder/hw-710-helm.jpg" alt="Fahrradhelm Art.-Nr. 710"><div class="pk"><span class="artnr zukauf">Art.-Nr. 710</span><h3>Fahrradhelm</h3><p>Leichter Rennhelm mit Ventilationssystem und Retentionssystem – ideal für sportliche Touren und den Stadtverkehr. Größen S–L.</p><div class="preis">49,00 € <small>UVP netto</small></div></div></div>
+      <div class="produkt"><img src="bilder/hw-720-trikot.jpg" alt="Radtrikot RuhrPace Art.-Nr. 720"><div class="pk"><span class="artnr zukauf">Art.-Nr. 720</span><h3>Radtrikot <i>RuhrPace</i></h3><p>Enganliegendes Funktionstrikot für Damen – Anthrazit/Orange, Reißverschluss, drei Rückentaschen. Größen XS–XL.</p><div class="preis">39,00 € <small>UVP netto</small></div></div></div>
+      <div class="produkt"><img src="bilder/hw-721-jacke.jpg" alt="Regenjacke RuhrPace Art.-Nr. 721"><div class="pk"><span class="artnr zukauf">Art.-Nr. 721</span><h3>Regenjacke <i>RuhrPace</i></h3><p>Wasserdichte Softshell-Jacke für Herren – winddicht, atmungsaktiv, reflektierende Elemente an Ärmelbündchen und Saum. Größen S–XXL.</p><div class="preis">69,00 € <small>UVP netto</small></div></div></div>
+      <div class="produkt"><img src="bilder/hw-730-schloss.jpg" alt="Faltschloss Art.-Nr. 730"><div class="pk"><span class="artnr zukauf">Art.-Nr. 730</span><h3>Faltschloss</h3><p>Kompaktes 6-Glied-Faltschloss mit 8-mm-Stahlgliedern – sicher und leicht transportierbar. Inkl. Halterung und 2 Schlüsseln.</p><div class="preis">35,00 € <small>UVP netto</small></div></div></div>
+      <div class="produkt"><img src="bilder/hw-740-brille.jpg" alt="Sport-Sonnenbrille Art.-Nr. 740"><div class="pk"><span class="artnr zukauf">Art.-Nr. 740</span><h3>Sport-Sonnenbrille</h3><p>Rahmenlose Sportbrille mit Wechselgläsern (getönt, klar, verspiegelt) – UV-400-Schutz, leichter TR90-Rahmen.</p><div class="preis">29,00 € <small>UVP netto</small></div></div></div>
+      <div class="produkt"><img src="bilder/hw-750-werkzeug.jpg" alt="Werkzeugset Art.-Nr. 750"><div class="pk"><span class="artnr zukauf">Art.-Nr. 750</span><h3>Werkzeugset</h3><p>12-teiliges Fahrrad-Werkzeugset in Rolltasche: Inbusschlüssel, Kettennieter, Reifenheber, Torx – für unterwegs und zuhause.</p><div class="preis">24,00 € <small>UVP netto</small></div></div></div>
+      <div class="produkt"><img src="bilder/hw-760-pflege.jpg" alt="Pflegeset Art.-Nr. 760"><div class="pk"><span class="artnr zukauf">Art.-Nr. 760</span><h3>Pflegeset</h3><p>3-teiliges Pflegeset: Kettenschmiermittel 100 ml, Reinigungsspray 200 ml, Kettenentfetter 100 ml – für Kette und Schaltwerk.</p><div class="preis">9,50 € <small>UVP netto</small></div></div></div>
     </div>
+    <p class="bildnachweis">Produktfotos der Handelswaren KI-generiert</p>
     <div class="hinweis" style="margin-top:1.2rem">
       <b>BWR-Hinweis:</b> Handelswaren werden beim Einkauf auf <b>Kto. 6080 Aufwendungen für Handelswaren</b> (Aufwand) und im Bestand auf <b>Kto. 2280 Waren (Handelswaren)</b> gebucht; Erlöse auf <b>Kto. 5100 Umsatzerlöse für Handelswaren</b> – im Unterschied zu Fertigerzeugnissen (Kto. 2200) und Rohstoffen (Kto. 2000). Sie verlassen das Unternehmen <i>unverändert</i>: kein Fertigungsprozess, keine innerbetriebliche Wertschöpfung.
     </div>
@@ -144,16 +150,17 @@
     <h2 class="kategorie-titel">Dienstleistungen</h2>
 
     <!-- Hero-Karte mit Foto -->
-    <div class="karte" style="padding:0;overflow:hidden;margin-bottom:1.4rem">
-      <div style="position:relative">
-        <img src="bilder/dl-radreisen.jpg" alt="Geführte Radreise in den österreichischen Alpen – Velowerk" style="width:100%;aspect-ratio:16/6;object-fit:cover;display:block">
-        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(22,25,28,.85));padding:1.4rem 1.6rem">
-          <div class="eyebrow" style="margin-bottom:.3rem">Reisevermittlung</div>
-          <h3 style="color:var(--weiss);font-size:1.5rem;margin:0">Geführte Radreisen</h3>
+    <div class="karte reise-karte">
+      <div class="reise-bild">
+        <img src="bilder/dl-radreisen.jpg" alt="Geführte Radreise in den österreichischen Alpen – Velowerk">
+        <div class="reise-titel">
+          <div class="eyebrow">Reisevermittlung</div>
+          <h3>Geführte Radreisen</h3>
         </div>
       </div>
-      <div style="padding:1.2rem 1.6rem 1.4rem">
+      <div class="reise-text">
         <p>Velowerk vermittelt geführte Mehrtagestouren für Fahrradfans – von der Ruhr bis in die Alpen. Alle Touren werden von erfahrenen Guides begleitet und sind inkl. Gepäcktransport und Streckenunterstützung buchbar. Leihräder aus unserem Sortiment auf Anfrage.</p>
+        <p class="bildnachweis">Foto KI-generiert</p>
       </div>
     </div>
 
@@ -178,7 +185,7 @@
         <p>Historische Fachwerkstädte, bewaldete Hügel und das Wesertal – eine der schönsten Flussradrouten Deutschlands.</p>
       </div>
       <div class="karte" style="border-left:4px solid var(--signal)">
-        <span class="artnr" style="background:var(--signal)">Art.-Nr. 940</span>
+        <span class="artnr akzent">Art.-Nr. 940</span>
         <h3 style="margin-top:.5rem">Südtirol-Pässetour ★</h3>
         <p style="color:var(--stahl);font-size:.88rem;margin-bottom:.6rem">7 Tage · Bozen · anspruchsvoll</p>
         <p>Alpenpässe, Bergdörfer und mediterrane Kulisse rund um Bozen – das Highlight im Velowerk-Reiseprogramm.</p>
@@ -246,12 +253,14 @@
     </div>
     <div>
       <b>Unternehmen</b><br>
+      <a href="wirtschaft.html">Markt &amp; Wirtschaft</a><br>
+      <a href="news.html">News &amp; Pressespiegel</a><br>
       <a href="stammdaten.html">Stammdaten</a><br>
       <a href="intern.html">Interner Bereich</a><br>
       <a href="karriere.html">Karriere</a>
     </div>
   </div>
-  <div class="fiktiv">Die Velowerk Ruhr GmbH ist ein frei erfundenes Modellunternehmen für Unterrichtszwecke im Fach Betriebswirtschaftslehre mit Rechnungswesen. Alle Personen, Daten, Bankverbindungen und Geschäftsvorfälle sind fiktiv; Ähnlichkeiten mit real existierenden Unternehmen sind zufällig und nicht beabsichtigt.<br>© 2026 Martin Frank · Konzept, Texte, Daten und Gestaltung sind urheberrechtlich geschützt. Nutzung für Unterrichtszwecke gestattet; jede weitergehende Verwendung nur mit Genehmigung des Urhebers.</div>
+  <div class="fiktiv">Die Velowerk Ruhr GmbH ist ein frei erfundenes Modellunternehmen für den Unterricht in Betriebswirtschaftslehre mit Rechnungswesen und in Volkswirtschaftslehre. Alle Personen, Bankverbindungen, Zahlen und Geschäftsvorfälle des Unternehmens sind fiktiv. Ähnlichkeiten mit real existierenden Unternehmen sind zufällig und nicht beabsichtigt. Verweise auf die EZB, das Statistische Bundesamt, Zölle und andere Ereignisse beziehen sich auf reale Entwicklungen.<br>© 2026 Martin Frank · Konzept, Texte, Daten und Gestaltung sind urheberrechtlich geschützt. Nutzung für Unterrichtszwecke gestattet; jede weitergehende Verwendung nur mit Genehmigung des Urhebers.</div>
 </footer>
 
 </body>

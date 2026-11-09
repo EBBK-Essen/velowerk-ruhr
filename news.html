@@ -5,25 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>News &amp; Pressespiegel – Velowerk Ruhr GmbH</title>
 <link rel="stylesheet" href="styles.css">
-<link rel="icon" href="bilder/logo.png">
+<link rel="icon" type="image/png" sizes="88x88" href="bilder/logo-88.png">
+<script src="menue.js" defer></script>
 </head>
 <body>
 
+<a class="sprunglink" href="#inhalt">Zum Inhalt</a>
 <header class="site">
   <div class="kopf-inner">
     <a class="brand" href="index.html">
-      <img src="bilder/logo.png" alt="Logo Velowerk Ruhr GmbH">
+      <picture><source type="image/webp" srcset="bilder/logo-88.webp 88w, bilder/logo-176.webp 176w" sizes="44px"><img src="bilder/logo-88.png" srcset="bilder/logo-88.png 88w, bilder/logo-176.png 176w" sizes="44px" width="44" height="44" alt="Logo Velowerk Ruhr GmbH"></picture>
       <span class="brand-name">Velowerk <span>Ruhr</span></span>
     </a>
-    <nav class="haupt">
+    <button type="button" class="menue-knopf" popovertarget="hauptmenue" aria-controls="hauptmenue" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menü</span></button>
+    <nav class="haupt" id="hauptmenue" popover aria-label="Hauptmenü">
       <a href="index.html">Start</a>
       <a href="produkte.html">Produkte</a>
       <a href="preisliste.html">Preisliste</a>
       <a href="team.html">Team</a>
       <a href="wirtschaft.html">Wirtschaft</a>
-      <a href="news.html" class="aktiv">News</a>
+      <a href="news.html" class="aktiv" aria-current="page">News</a>
       <a href="karriere.html">Karriere</a>
       <a href="stammdaten.html">Stammdaten</a>
+      <a href="unternehmen-hf1.html" class="hf-link">Unternehmen (HF 1)</a>
       <a href="beschaffung.html" class="hf-link">Beschaffung (HF 2)</a>
       <a href="intern.html" class="intern-link">Intern</a>
     </nav>
@@ -38,7 +42,7 @@
   </div>
 </div>
 
-<main>
+<main id="inhalt">
 
   <section id="ausgaben">
     <h2>Aktuelle Ausgabe</h2>
@@ -53,16 +57,16 @@
       <div>
         <h3 style="margin-top:0">Ruhr Kurier vom 12. Juni 2026</h3>
         <p>Die Themen der Titelseite:</p>
-        <ul class="downloads" style="margin:.6rem 0 1rem">
-          <li>📈 <b>Konjunktur kommt in Fahrt</b> – Wirtschaft wächst um 1,6 %, EZB senkt die Zinsen. Mit Lokalteil: Was der Aufschwung für Velowerk bedeutet</li>
-          <li>⚽ <b>WM-Auftakt</b> – Mexiko siegt im Eröffnungsspiel, Deutschland startet am Sonntag</li>
-          <li>🚀 <b>Börsengang der Superlative</b> – SpaceX startet mit Rekordbewertung an der Börse</li>
-          <li>🕊️ <b>Ukraine</b> – Gipfel nennt Bedingungen für Friedensverhandlungen</li>
+        <ul class="downloads themen icon-liste">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span><b>Konjunktur kommt in Fahrt</b> – Wirtschaft wächst um 1,6 %, EZB hebt die Zinsen an. Mit Lokalteil: Was der Aufschwung für Velowerk bedeutet</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l4 2.9-1.5 4.6h-5L8 10.4z"/></svg><span><b>WM-Auftakt</b> – Mexiko siegt im Eröffnungsspiel, Deutschland startet am Sonntag</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 20v-6M11 20V9M16 20v-9M21 4l-5 4-4-2-6 5"/></svg><span><b>Börsengang der Superlative</b> – SpaceX startet mit Rekordbewertung an der Börse</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/></svg><span><b>Ukraine</b> – Gipfel nennt Bedingungen für Friedensverhandlungen</span></li>
         </ul>
-        <ul class="downloads">
-          <li>📄 <span>Komplette Ausgabe als PDF</span> <span class="status-badge">Dokument in Vorbereitung</span></li>
+        <ul class="downloads icon-liste">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><span><span>Komplette Ausgabe als PDF</span> <span class="status-badge hell">Dokument in Vorbereitung</span></span></li>
         </ul>
-        <p style="font-size:.85rem;color:var(--stahl);margin-top:1rem">Der „Ruhr Kurier" ist eine fiktive Zeitung für Unterrichtszwecke. Sport- und Weltmeldungen fassen reale Ereignisse vereinfacht zusammen; alle Konjunktur- und Unternehmensdaten entstammen der fiktiven Modellwelt der Velowerk Ruhr GmbH.</p>
+        <p style="font-size:.85rem;color:var(--stahl);margin-top:1rem">Der „Ruhr Kurier“ ist eine fiktive Zeitung für Unterrichtszwecke. Sport- und Weltmeldungen fassen reale Ereignisse vereinfacht zusammen; alle Konjunktur- und Unternehmensdaten entstammen der fiktiven Modellwelt der Velowerk Ruhr GmbH.</p>
       </div>
     </div>
   </section>
@@ -74,7 +78,7 @@
 
   <section id="unternehmensmeldungen">
     <h2>Meldungen aus dem Unternehmen</h2>
-    <p>Die offiziellen Pressemitteilungen der Velowerk Ruhr GmbH – von der EZB-Zinssenkung bis zur Fusionskontrolle – finden Sie auf der Seite <a href="wirtschaft.html#presse">Markt &amp; Wirtschaft</a>.</p>
+    <p>Die offiziellen Pressemitteilungen der Velowerk Ruhr GmbH – von der EZB-Zinserhöhung bis zur Fusionskontrolle – finden Sie auf der Seite <a href="wirtschaft.html#presse">Markt &amp; Wirtschaft</a>.</p>
   </section>
 
 </main>
@@ -101,11 +105,12 @@
       <b>Unternehmen</b><br>
       <a href="wirtschaft.html">Markt &amp; Wirtschaft</a><br>
       <a href="news.html">News &amp; Pressespiegel</a><br>
+      <a href="stammdaten.html">Stammdaten</a><br>
       <a href="intern.html">Interner Bereich</a><br>
       <a href="karriere.html">Karriere</a>
     </div>
   </div>
-  <div class="fiktiv">Die Velowerk Ruhr GmbH ist ein frei erfundenes Modellunternehmen für Unterrichtszwecke im Fach Betriebswirtschaftslehre mit Rechnungswesen sowie Volkswirtschaftslehre. Alle Personen, Daten, Marktzahlen und Geschäftsvorfälle sind fiktiv; Ähnlichkeiten mit real existierenden Unternehmen sind zufällig und nicht beabsichtigt.<br>© 2026 Martin Frank · Konzept, Texte, Daten und Gestaltung sind urheberrechtlich geschützt. Nutzung für Unterrichtszwecke gestattet; jede weitergehende Verwendung nur mit Genehmigung des Urhebers.</div>
+  <div class="fiktiv">Die Velowerk Ruhr GmbH ist ein frei erfundenes Modellunternehmen für den Unterricht in Betriebswirtschaftslehre mit Rechnungswesen und in Volkswirtschaftslehre. Alle Personen, Bankverbindungen, Zahlen und Geschäftsvorfälle des Unternehmens sind fiktiv. Ähnlichkeiten mit real existierenden Unternehmen sind zufällig und nicht beabsichtigt. Verweise auf die EZB, das Statistische Bundesamt, Zölle und andere Ereignisse beziehen sich auf reale Entwicklungen.<br>© 2026 Martin Frank · Konzept, Texte, Daten und Gestaltung sind urheberrechtlich geschützt. Nutzung für Unterrichtszwecke gestattet; jede weitergehende Verwendung nur mit Genehmigung des Urhebers.</div>
 </footer>
 
 </body>

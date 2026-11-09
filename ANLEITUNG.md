@@ -8,19 +8,19 @@ Alle Daten sind frei erfunden und urheberrechtlich unbedenklich selbst erstellt.
 ## 1. Website auf GitHub Pages veröffentlichen (einmalig, ca. 15 Min.)
 
 1. Kostenloses Konto auf **github.com** anlegen (z.B. Benutzername `ebbk-bwr`)
-2. Oben rechts auf **„+" → „New repository"** klicken
-3. Repository-Name: `velowerk-ruhr` → Haken bei **„Public"** → **„Create repository"**
-4. Auf **„uploading an existing file"** klicken
+2. Oben rechts auf **„+“ → „New repository“** klicken
+3. Repository-Name: `velowerk-ruhr` → Haken bei **„Public“** → **„Create repository“**
+4. Auf **„uploading an existing file“** klicken
 5. **Alle Dateien und Ordner aus diesem ZIP** per Drag & Drop in das Fenster ziehen
    (wichtig: `index.html` muss auf der obersten Ebene liegen, die Ordner `bilder/` und `dokumente/` mitsamt Inhalt)
-6. Unten auf **„Commit changes"** klicken
-7. Im Repository auf **„Settings" → „Pages"** (linkes Menü)
-8. Unter „Branch": **`main`** auswählen, Ordner **`/ (root)`** → **„Save"**
+6. Unten auf **„Commit changes“** klicken
+7. Im Repository auf **„Settings“ → „Pages“** (linkes Menü)
+8. Unter „Branch“: **`main`** auswählen, Ordner **`/ (root)`** → **„Save“**
 9. Nach 1–2 Minuten ist die Seite erreichbar unter:
    **https://BENUTZERNAME.github.io/velowerk-ruhr/**
 
 Optional: Eigene Domain (z.B. velowerk-ruhr.de, ca. 10 €/Jahr bei IONOS/Strato)
-lässt sich unter Settings → Pages → „Custom domain" verbinden.
+lässt sich unter Settings → Pages → „Custom domain“ verbinden.
 
 ## 2. Eigene Bilder einsetzen
 
@@ -30,9 +30,15 @@ Alle Bildplatzhalter liegen im Ordner `bilder/`. Einfach das eigene Foto
 | Datei                | Inhalt                          |
 |----------------------|---------------------------------|
 | rad-110.jpg ... rad-620.jpg | Produktfotos (12 Modelle) |
-| team-*.jpg           | Mitarbeiterfotos (6 Personen)   |
+| team-*.png           | Porträts (9 Personen, freigestellt) |
 | werk.jpg             | Firmengebäude (Startseite)      |
-| logo.svg             | Firmenlogo                      |
+| logo.png             | Firmenlogo: rundes Emblem, freigestellt (600 × 600 px) |
+| logo-88.png/.webp, logo-176.png/.webp | verkleinerte Fassungen von logo.png für Kopf und Favicon, bei neuem Logo neu erzeugen |
+| logo.svg             | einfaches Piktogramm, Einsatz offen (Entscheidung V1) |
+
+Bildnachweis: Alle Bilder der Website sind KI-generiert, außer team-frank.png (echtes Foto).
+Die Seiten tragen dazu den Hinweis „KI-generiert“ (Klasse `bildnachweis`).
+Wer ein Bild austauscht, passt den Hinweis an.
 
 Empfohlene Größen: Produkte 1200×800 px, Team 600×600 px (quadratisch).
 
@@ -43,7 +49,7 @@ KI-generierte Gesichter oder Illustrationen sind die unkomplizierteste Lösung.
 ## 3. Inhalte ändern
 
 Jede Seite ist eine eigene HTML-Datei – direkt auf github.com bearbeitbar
-(Datei anklicken → Stift-Symbol → ändern → „Commit changes"):
+(Datei anklicken → Stift-Symbol → ändern → „Commit changes“):
 
 | Datei            | Inhalt                                              |
 |------------------|-----------------------------------------------------|
@@ -74,7 +80,7 @@ Auf der Preislisten-Seite sind zwei Beispiel-Links bereits vorbereitet.
 
 ## 6. VWL-Nutzung: Zuordnung zum Bildungsplan (Heft 44014/2018, Anlage C2 WuV)
 
-| Website-Element (Seite „Wirtschaft" / Intern) | Anforderungssituation VWL |
+| Website-Element (Seite „Wirtschaft“ / Intern) | Anforderungssituation VWL |
 |---|---|
 | Velowerk im Wirtschaftskreislauf (Sektoren-Tabelle, monetäre/reale Ströme) | AS 1.1, 1.4 |
 | Marktdaten + Elastizitäts-Beispiel (Flitzer vs. Emscher) | AS 1.2, 2.1 |
@@ -82,7 +88,7 @@ Auf der Preislisten-Seite sind zwei Beispiel-Links bereits vorbereitet.
 | Konjunkturmonitor (Umsatz, BIP, Inflation, Geschäftsklima 2021–2025) | AS 3.3, 6.1 |
 | Produktionsfaktoren-Karten (Arbeit/Boden/Kapital, Faktorkombination) | AS 3.1 |
 | Außenhandel + Wechselkurs-Rechenbeispiel (USD-Import) | AS 2.2, 4.3 |
-| Pressemeldung EZB-Leitzinssenkung/Investition | AS 6.1, 6.3 |
+| Pressemeldung EZB-Leitzinserhöhung/Investition (verschoben) | AS 6.1, 6.3 |
 | Pressemeldung Tarifabschluss/Personalkosten | AS 5.2 |
 | Pressemeldung Pedelec-Förderung der Stadt Essen (Subvention) | AS 6.2 |
 | Inflationsdaten im Konjunkturmonitor, Preisliste (Preiserhöhungen) | AS 1.3, 4.2 |
@@ -91,13 +97,32 @@ Auf der Preislisten-Seite sind zwei Beispiel-Links bereits vorbereitet.
 Tipp: Vor jeder neuen Unterrichtsreihe kann eine passende neue Pressemitteilung
 auf der Wirtschaft-Seite ergänzt werden (wirtschaft.html, Abschnitt "presse").
 
+### Direktlinks zu den Pressemitteilungen (für Moodle)
+
+Jede Pressemitteilung hat eine eigene Sprungmarke. Link: `wirtschaft.html#` plus Kennung.
+Die ganze Liste: `wirtschaft.html#presse`
+
+| Kennung | Pressemitteilung |
+|---|---|
+| `presse-2026-10-strompreis` | Ökostromtarif steigt um 18 % (8. Oktober 2026) |
+| `presse-2026-06-ezb` | EZB erhöht Leitzins, Investition verschoben (18. Juni 2026) |
+| `presse-2026-04-us-zoelle` | Neue US-Zölle auf Federgabeln (3. April 2026) |
+| `presse-2026-02-tarifabschluss` | Tarifabschluss Metallbranche (20. Februar 2026) |
+| `presse-2026-01-pedelec-foerderung` | Pedelec-Förderung der Stadt Essen (15. Januar 2026) |
+| `presse-2025-12-fusion` | Fusion NordRad und Cyclonix, Kartellamt (10. Dezember 2025) |
+
+Beispiel: https://ebbk-essen.github.io/velowerk-ruhr/wirtschaft.html#presse-2026-06-ezb
+
+Neue Meldung: Karte als `<article class="karte presse-meldung" id="presse-JJJJ-MM-thema">`
+anlegen und hier in die Liste eintragen.
+
 ## 7. Neuausrichtung Produktion (Juni 2026)
 
 Velowerk positioniert sich als industrieller Serienfertiger ("Fahrradwerk", nicht mehr
 "Manufaktur"). Neue Sektion "Produktion" auf produkte.html#produktion mit Zuordnung
 Produktgruppe → Fertigungstyp/Organisationstyp (BWR, HF 3 Leistungserstellung):
 Fließfertigung (Volumenmodelle), Gruppenfertigung (MTB/Pedelecs), Reihenfertigung
-(Rahmenbau, inkl. neuer Lackieranlage), Kleinserie statt Einzelfertigung (»Margarethe«),
+(Rahmenbau, inkl. Lackierung; neue Lackieranlage geplant, vertagt), Kleinserie statt Einzelfertigung (»Margarethe«),
 Werkstattfertigung nur Prototypen/Service; dazu Vorrats- vs. Auftragsfertigung.
 
 ## 8. Ausbau Juni 2026: Neue Seiten und Unterrichtsmaterial
