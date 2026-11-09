@@ -34,7 +34,7 @@ Alle Bildplatzhalter liegen im Ordner `bilder/`. Einfach das eigene Foto
 | werk.jpg             | Firmengebäude (Startseite)      |
 | logo.png             | Firmenlogo: rundes Emblem, freigestellt (600 × 600 px) |
 | logo-88.png/.webp, logo-176.png/.webp | verkleinerte Fassungen von logo.png für Kopf und Favicon, bei neuem Logo neu erzeugen |
-| logo.svg             | einfaches Piktogramm, Einsatz offen (Entscheidung V1) |
+| logo.svg             | altes Piktogramm, nicht mehr verwendet (Archiv). Einziges Logo ist logo.png |
 
 Bildnachweis: Alle Bilder der Website sind KI-generiert, außer team-frank.png (echtes Foto).
 Die Seiten tragen dazu den Hinweis „KI-generiert“ (Klasse `bildnachweis`).
