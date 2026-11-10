@@ -1,7 +1,7 @@
 # Velowerk Ruhr GmbH – Website-Anleitung
 
 Fiktives Modellunternehmen für den BWR-Unterricht (Anlage C2, FHR).
-Alle Daten sind frei erfunden und urheberrechtlich unbedenklich selbst erstellt.
+Alle Unternehmensdaten sind frei erfunden und urheberrechtlich unbedenklich selbst erstellt. Ausnahme: BIP-Wachstum, Inflationsrate und Leitzinsen im Konjunkturmonitor und im Ruhr Kurier sind echte Werte. BIP: Destatis, Pressemitteilung Nr. 269 vom 30.07.2026. Inflation: Destatis, Verbraucherpreisindex, Jahreswerte. Leitzinsen: EZB. Hinweis für Lehrkräfte: Destatis hat das BIP-Wachstum 2024 im Juli 2026 von −0,5 % auf 0,0 % korrigiert. Ältere Quellen nennen deshalb −0,5 %. Der Ruhr Kurier vom 12. Juni 2026 zitiert bewusst nur 2025.
 
 ---
 
@@ -13,6 +13,8 @@ Alle Daten sind frei erfunden und urheberrechtlich unbedenklich selbst erstellt.
 4. Auf **„uploading an existing file“** klicken
 5. **Alle Dateien und Ordner aus diesem ZIP** per Drag & Drop in das Fenster ziehen
    (wichtig: `index.html` muss auf der obersten Ebene liegen, die Ordner `bilder/` und `dokumente/` mitsamt Inhalt)
+   Seit November 2026 gehören dazu auch die Skripte `menue.js`, `presse-filter.js` und `aktuell.js`
+   sowie der Ordner `werkzeug/` mit `diagramme.py`. Den Ordner `werkzeug/ausgabe/` nicht hochladen.
 6. Unten auf **„Commit changes“** klicken
 7. Im Repository auf **„Settings“ → „Pages“** (linkes Menü)
 8. Unter „Branch“: **`main`** auswählen, Ordner **`/ (root)`** → **„Save“**
@@ -104,6 +106,8 @@ Die ganze Liste: `wirtschaft.html#presse`
 
 | Kennung | Pressemitteilung |
 |---|---|
+| `presse-2026-11-auslastung` | Montage fast voll ausgelastet, Lieferzeit bis sechs Wochen (6. November 2026) |
+| `presse-2026-11-nordrad-cyclonix` | Aus der Branche: NordRad-Cyclonix erhöht die Preise (4. November 2026) |
 | `presse-2026-10-strompreis` | Ökostromtarif steigt um 18 % (8. Oktober 2026) |
 | `presse-2026-06-ezb` | EZB erhöht Leitzins, Investition verschoben (18. Juni 2026) |
 | `presse-2026-04-us-zoelle` | Neue US-Zölle auf Federgabeln (3. April 2026) |
@@ -113,8 +117,39 @@ Die ganze Liste: `wirtschaft.html#presse`
 
 Beispiel: https://ebbk-essen.github.io/velowerk-ruhr/wirtschaft.html#presse-2026-06-ezb
 
-Neue Meldung: Karte als `<article class="karte presse-meldung" id="presse-JJJJ-MM-thema">`
-anlegen und hier in die Liste eintragen.
+### Moodle-Links nach Thema
+
+Der Newsroom kann nach Thema filtern. Ein Link mit `?thema=` zeigt nur dieses Thema:
+`wirtschaft.html?thema=zoll#presse`
+
+Themen: `geldpolitik`, `tarif`, `zoll`, `energie`, `wettbewerb`, `foerderung`
+(dazu `produktion`, sobald es eine Meldung dazu gibt). Ein Direktlink auf eine
+einzelne Meldung (`#presse-...`) zeigt die Meldung immer, auch wenn ein Filter aktiv ist.
+Ohne JavaScript ist der Filter unsichtbar, dann stehen alle Meldungen untereinander.
+
+### Neue Meldung anlegen
+
+Neueste Meldung oben in die Liste `<div data-presse-liste>` in wirtschaft.html setzen.
+Vorlage (Wörter in Großbuchstaben ersetzen):
+
+```html
+<article class="karte presse-meldung" id="presse-JJJJ-MM-thema" data-thema="THEMA">
+  <div class="presse-zeile"><span class="presse-art">Pressemitteilung</span><span class="etikett">THEMA-NAME</span></div>
+  <h3>ÜBERSCHRIFT</h3>
+  <p><time class="ortsmarke" datetime="JJJJ-MM-TT">Essen, T. MONAT JJJJ.</time> TEXT IN KURZEN SÄTZEN.</p>
+  <p>Geschäftsführer Martin Frank: „ZITAT.“</p>
+  <p class="presse-fuss"><a class="direktlink" href="#presse-JJJJ-MM-thema">Direktlink zu dieser Meldung</a></p>
+</article>
+```
+
+- `data-thema` muss genau einer der Werte aus der Liste `THEMEN` in `presse-filter.js` sein
+  (`geldpolitik`, `tarif`, `zoll`, `energie`, `wettbewerb`, `foerderung`, `produktion`),
+  klein und ohne Umlaut. Sonst taucht die Meldung unter keinem Filterknopf auf, nur unter „Alle“.
+  Ein neues Thema zuerst dort in `THEMEN` ergänzen.
+- Die Ortsmarke steht fett am Anfang des ersten Absatzes, mit Punkt am Ende.
+- Der Direktlink zeigt auf die eigene id. Daraus kopiert man den Moodle-Link.
+- Meldung über andere Unternehmen: `class="karte presse-meldung branche"` und als Art „Aus der Branche“.
+- Danach die Kennung oben in die Liste eintragen.
 
 ## 7. Neuausrichtung Produktion (Juni 2026)
 
@@ -154,3 +189,52 @@ Interner Bereich neu:
 - Veroeffentlichen: Gute Einsendungen als neue <div class="karte">-Bloecke im
   Abschnitt "Geprueefte Bewertungen" in bewertungen.html einfuegen (bestehende
   Karte kopieren, Texte ersetzen) und Datei neu zu GitHub hochladen.
+
+## 10. Aktuell-Band austauschen (index.html)
+
+Auf der Startseite steht zwischen Kopf und Hero ein schmales Band „Aktuell“ mit
+einem Satz und einem Link auf eine Meldung im Newsroom. Es ist ein einzelner,
+kommentierter Block in index.html (`<!-- ===== AKTUELL-BAND ... -->` bis
+`<!-- ===== Ende AKTUELL-BAND ===== -->`).
+
+Austauschen:
+1. Datum zweimal ändern: `datetime="JJJJ-MM-TT"` und der sichtbare Text `TT.MM.JJJJ`.
+2. Den Satz in `<p class="aktuell-text">` ersetzen. Ein Satz, höchstens 90 Zeichen.
+3. Im Link `href="wirtschaft.html#presse-..."` die Kennung der Meldung eintragen.
+
+4. Im Link auch `aria-label="Zur Meldung: ..."` an den neuen Satz anpassen.
+5. Im `<aside>` das Ablaufdatum `data-bis="JJJJ-MM-TT"` setzen.
+
+Ablaufdatum: Das kleine Skript `aktuell.js` (nur auf index.html eingebunden) blendet
+das Band nach dem Tag in `data-bis` von selbst aus. Beispiel: `data-bis="2026-12-31"`
+zeigt das Band bis einschließlich 31.12.2026. Ohne `data-bis` bleibt es stehen.
+
+Sofort ausblenden: beim `<aside class="aktuell-band" ...>` das Wort `hidden` ergänzen,
+also `<aside class="aktuell-band" aria-label="Aktuelle Meldung" data-bis="..." hidden>`.
+Wieder zeigen: `hidden` löschen und ein Datum in der Zukunft setzen. Alternativ den ganzen Block löschen.
+Der Volltext einer Meldung steht nur auf wirtschaft.html. Das Band verlinkt nur.
+
+### Archiv auf news.html
+
+Der Abschnitt „Archiv“ auf news.html ist mit `hidden` ausgeblendet, solange es keine
+ältere Ausgabe gibt (`<section id="archiv" hidden>`). Sobald eine zweite Ausgabe des
+Ruhr Kurier dazukommt: dort einen Link auf die ältere Ausgabe eintragen und `hidden` löschen.
+
+## 11. Diagramme auf wirtschaft.html (werkzeug/diagramme.py)
+
+Die Diagramme in den Abschnitten Fahrradmarkt, Konjunkturmonitor und Außenhandel
+sind fertiges SVG im HTML. Sie brauchen kein JavaScript und keine Bibliothek.
+Unter jedem Diagramm steht die Tabelle unter „Daten anzeigen“.
+
+Ändern sich Zahlen:
+1. Die Tabelle in wirtschaft.html ändern.
+2. Dieselben Zahlen oben in `werkzeug/diagramme.py` eintragen (KONJUNKTUR, MARKT, KURSE).
+3. Im Ordner des Repositorys `python3 werkzeug/diagramme.py` aufrufen. Das Skript
+   schreibt die SVG-Dateien nach `werkzeug/ausgabe/`.
+4. Den Inhalt der passenden Datei in wirtschaft.html gegen das alte `<svg ...>...</svg>` tauschen.
+5. Zur Kontrolle `python3 werkzeug/diagramme.py --pruefen` aufrufen. Es liest die
+   Tabellenwerte aus wirtschaft.html, vergleicht sie mit den Zahlen im Skript und prüft,
+   ob alle Diagramme in wirtschaft.html zum Skript passen. Am Ende steht „Alles passt.“
+   oder die Liste der Abweichungen.
+
+Der Ordner `werkzeug/ausgabe/` ist nur eine Arbeitskopie und muss nicht hochgeladen werden.

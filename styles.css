@@ -316,7 +316,6 @@ tr.zwischen td{font-weight:700;background:#FBEFE8}
 /* ---------- Pressemitteilungen ---------- */
 .presse-meldung{margin-bottom:1rem}
 .presse-meldung:last-child{margin-bottom:0}
-.presse-datum{color:var(--stahl);font-size:.85rem;margin-bottom:.4rem}
 
 /* ---------- Radreisen-Karte mit Foto (produkte.html) ---------- */
 .reise-karte{padding:0;overflow:hidden;margin-bottom:1.4rem}
@@ -386,3 +385,227 @@ footer.site a{color:var(--hellstahl)}
   footer.site .fuss-inner{display:none}
   .fiktiv{color:var(--anthrazit);border-top:0;margin-top:0;padding-top:0}
 }
+
+/* ============================================================
+   VELOWERK RUHR GmbH: neue Bausteine (Vorgabe Jessica, 09.11.2026)
+   Newsroom, Etiketten, Filter, Aktuell-Band, Zeitungsseite, Diagramme.
+   Beim Bau ans Ende von styles.css anhängen, vor den Block @media print
+   oder mit eigenem Druckblock wie hier. Keine externen Ressourcen.
+   ============================================================ */
+
+/* ---------- 1 Aktuell-Band (nur index.html, zwischen Kopf und Hero) ---------- */
+.aktuell-band{
+  background:#FFF6EF;border-bottom:1px solid #F0C9AF;
+  padding:.7rem 1.2rem;
+}
+.aktuell-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;align-items:center;gap:.4rem 1rem;flex-wrap:wrap;
+  min-height:44px;
+}
+.aktuell-marke{
+  font-family:'IBM Plex Mono',monospace;font-size:.78rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;
+  background:var(--signal-dunkel);color:var(--weiss);
+  padding:.28rem .6rem;border-radius:3px;flex:none;
+}
+.aktuell-datum{font-family:'IBM Plex Mono',monospace;font-size:.82rem;color:var(--stahl);flex:none}
+.aktuell-text{font-weight:600;color:var(--anthrazit);flex:1 1 22rem;margin:0}
+.aktuell-link{
+  color:var(--signal-tief);font-weight:700;flex:none;
+  display:inline-flex;align-items:center;min-height:44px;
+}
+.aktuell-link:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+@media(max-width:767.98px){
+  .aktuell-text{flex-basis:100%}
+}
+
+/* ---------- 2 Newsroom: Kopf wie Briefbogen ---------- */
+.presse-kopf{
+  display:flex;justify-content:space-between;align-items:center;gap:1rem 2rem;flex-wrap:wrap;
+  background:var(--weiss);border:1px solid var(--linie);border-bottom:3px solid var(--signal);
+  border-radius:8px 8px 0 0;padding:1rem 1.4rem;margin-bottom:1.4rem;
+}
+.presse-absender{display:flex;align-items:center;gap:.8rem}
+.presse-absender img{width:48px;height:48px;flex:none}
+.presse-absender b{display:block;font-family:'Saira Condensed',sans-serif;font-size:1.3rem;font-weight:700;text-transform:uppercase;line-height:1.1}
+.presse-absender span{color:var(--stahl);font-size:.92rem}
+.presse-kontakt{font-size:.88rem;color:var(--stahl);text-align:right;line-height:1.45}
+.presse-kontakt b{color:var(--anthrazit)}
+@media(max-width:599.98px){.presse-kontakt{text-align:left}}
+
+/* ---------- 3 Filter nach Thema (erscheint erst mit JavaScript) ---------- */
+.presse-filter{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 .6rem;padding:0;list-style:none}
+.presse-filter button{
+  font:inherit;font-weight:600;font-size:.95rem;cursor:pointer;
+  min-height:44px;padding:.4rem .95rem;border-radius:99px;
+  background:var(--weiss);color:var(--anthrazit);border:1.5px solid var(--anthrazit);
+}
+.presse-filter button .anzahl{font-family:'IBM Plex Mono',monospace;font-size:.8rem;font-weight:500;margin-left:.35rem;color:var(--stahl)}
+.presse-filter button:hover{background:var(--hellstahl)}
+.presse-filter button[aria-pressed="true"]{background:var(--signal-dunkel);border-color:var(--signal-dunkel);color:var(--weiss)}
+.presse-filter button[aria-pressed="true"] .anzahl{color:var(--weiss)}
+.presse-filter button:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+.presse-zahl{font-family:'IBM Plex Mono',monospace;font-size:.82rem;color:var(--stahl);margin:0 0 1rem}
+
+/* ---------- 4 Pressemitteilung als Karte ---------- */
+.presse-meldung{border-top:4px solid var(--signal);padding-top:1.1rem}
+.presse-meldung.branche{border-top-color:var(--stahl)}
+.presse-meldung[hidden]{display:none}
+.presse-zeile{display:flex;align-items:center;gap:.5rem .8rem;flex-wrap:wrap;margin-bottom:.55rem}
+.presse-art{font-family:'IBM Plex Mono',monospace;font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--signal-dunkel)}
+.presse-meldung.branche .presse-art{color:var(--stahl)}
+.etikett{
+  font-family:'IBM Plex Mono',monospace;font-size:.78rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--hellstahl);color:var(--anthrazit);padding:.18rem .5rem;border-radius:3px;
+}
+.presse-meldung h3{font-size:1.35rem;margin-bottom:.5rem}
+.ortsmarke{font-weight:700}
+.presse-meldung p+p{margin-top:.6rem}
+.presse-fuss{margin-top:.8rem;font-size:.88rem}
+.direktlink{color:var(--stahl);text-decoration:underline;text-underline-offset:2px}
+.direktlink:hover{color:var(--signal-dunkel)}
+.direktlink:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+/* Ziel eines Direktlinks kurz sichtbar machen, ohne Bewegung */
+.presse-meldung:target{box-shadow:0 0 0 3px var(--signal)}
+.ueber-velowerk{font-size:.9rem;color:var(--stahl);margin-top:1.4rem;border-top:1px solid var(--linie);padding-top:.8rem}
+
+/* ---------- 5 Zeitungsseite "Ruhr Kurier" (fremdes Dokument, neutral, Serif) ---------- */
+.zeitung{
+  --z-papier:#F7F4EC;--z-tinte:#1A1A1A;--z-grau:#5E5A54;--z-rot:#8C1D18;--z-linie:#1A1A1A;
+  background:var(--z-papier);color:var(--z-tinte);
+  font-family:Georgia,'Times New Roman',Times,serif;
+  border:1px solid #D8D2C4;box-shadow:0 2px 10px rgba(0,0,0,.08);
+  padding:2rem 2.2rem 1.6rem;margin:0;
+  hyphens:auto;
+}
+.zeitung h1,.zeitung h2,.zeitung h3{font-family:Georgia,'Times New Roman',Times,serif;text-transform:none;letter-spacing:0}
+.zeitung-kopf{text-align:center;border-bottom:3px double var(--z-linie);padding-bottom:.6rem;margin-bottom:1.4rem}
+.zeitung-titel{font-size:clamp(2.6rem,8vw,4.6rem);font-weight:700;line-height:1;margin:0}
+.zeitung-zeile{
+  display:flex;justify-content:space-between;gap:.3rem 1rem;flex-wrap:wrap;
+  border-top:1px solid var(--z-linie);margin-top:.7rem;padding-top:.4rem;
+  font-size:.88rem;color:var(--z-grau);
+}
+.zeitung-raster{display:grid;grid-template-columns:2fr 1fr;gap:0 2rem}
+.zeitung-raster>aside{border-left:1px solid var(--z-linie);padding-left:1.6rem}
+.zeitung .rubrik{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--z-rot);font-weight:700;margin-bottom:.3rem}
+.zeitung .schlagzeile{font-size:clamp(1.9rem,4.4vw,2.8rem);font-weight:700;line-height:1.08;margin-bottom:.4rem}
+.zeitung .unterzeile{font-style:italic;font-size:1.2rem;line-height:1.35;margin-bottom:1rem;color:var(--z-tinte)}
+.zeitung .spalten{columns:2 15rem;column-gap:1.6rem;column-rule:1px solid #CFC8B8;font-size:1.02rem;line-height:1.5}
+.zeitung .spalten p{margin-bottom:.7rem}
+.zeitung .lokal{border-top:3px solid var(--z-linie);margin-top:1rem;padding-top:.7rem}
+.zeitung .lokal h3{font-size:1.4rem;font-weight:700;margin-bottom:.4rem}
+.zeitung .kurz{border-bottom:1px solid #CFC8B8;padding:0 0 .9rem;margin-bottom:.9rem}
+.zeitung .kurz:last-child{border-bottom:0}
+.zeitung .kurz h3{font-size:1.3rem;font-weight:700;line-height:1.15;margin-bottom:.25rem}
+.zeitung .kurz p{font-size:1rem;line-height:1.45}
+.zeitung-seitentitel{font-size:.88rem;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--z-linie);padding-bottom:.3rem;margin-bottom:.9rem}
+.zeitung-fuss{border-top:1px solid var(--z-linie);margin-top:1.2rem;padding-top:.5rem;font-size:.85rem;color:var(--z-grau)}
+@media(max-width:767.98px){
+  .zeitung{padding:1.2rem 1rem 1rem}
+  .zeitung-raster{grid-template-columns:1fr}
+  .zeitung-raster>aside{border-left:0;padding-left:0;border-top:3px double var(--z-linie);margin-top:1.2rem;padding-top:.9rem}
+}
+
+/* Hinweis unter der Zeitung und Verweis auf den Newsroom */
+.themen-links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem;list-style:none}
+.themen-links a{
+  display:inline-flex;align-items:center;min-height:44px;padding:.4rem .95rem;border-radius:99px;
+  background:var(--weiss);border:1.5px solid var(--anthrazit);color:var(--anthrazit);font-weight:600;text-decoration:none;
+}
+.themen-links a:hover{background:var(--signal-dunkel);border-color:var(--signal-dunkel);color:var(--weiss)}
+.themen-links a:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+
+/* ---------- 6 Diagramme (inline SVG, ohne Bibliothek) ---------- */
+.diagramm{
+  background:var(--weiss);border:1px solid var(--linie);border-radius:8px;
+  padding:1.2rem 1.2rem 1rem;margin:0;box-shadow:0 1px 3px rgba(0,0,0,.05);
+}
+.diagramm h3{margin-bottom:.15rem}
+.diagramm-unter{color:var(--stahl);font-size:.95rem;margin-bottom:.7rem}
+.diagramm svg{display:block;width:100%;height:auto;overflow:visible} /* Beschriftung "100" und "0" links neben der Basislinie nicht abschneiden */
+.diagramm-gitter{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem 1.6rem;margin-top:.4rem}
+.panel-titel{font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1.15rem;line-height:1.15;margin-bottom:.2rem}
+.panel-titel span{font-family:'Source Sans 3',sans-serif;font-weight:400;font-size:.92rem;color:var(--stahl);margin-left:.3rem}
+@media(max-width:760px){
+  .diagramm{padding:.9rem .75rem .8rem}
+  .diagramm-gitter{grid-template-columns:1fr}
+}
+/* SVG-Bausteine: Schrift erbt Source Sans 3 von der Seite */
+.d-balken{fill:var(--stahl)}
+.d-fokus{fill:var(--signal)}
+.d-band{fill:#FFF6EF;stroke:#F0C9AF;stroke-width:1}
+.d-ebike{fill:var(--signal-dunkel)}
+.d-rest{fill:var(--stahl-hell)}
+.d-basis{stroke:var(--anthrazit);stroke-width:1}
+.d-ref{stroke:var(--stahl);stroke-width:1}
+.d-wert{font-size:14px;font-weight:600;fill:var(--anthrazit);font-variant-numeric:tabular-nums}
+.d-wert.stark{font-weight:700}
+.d-innen{font-size:13px;font-weight:700;fill:var(--weiss)}
+.d-jahr{font-size:13px;fill:var(--stahl);font-variant-numeric:tabular-nums}
+.d-jahr.stark{font-weight:700;fill:var(--anthrazit)}
+.d-notiz{font-size:13px;fill:var(--stahl)} /* 13 statt 12: bei 375 px sonst nur 11,1 px */
+.d-kat{font-size:13px;font-weight:600;fill:var(--anthrazit)}
+/* Legende als HTML über dem Diagramm */
+.legende{display:flex;flex-wrap:wrap;gap:.3rem 1.2rem;list-style:none;margin:0 0 .5rem;font-size:.92rem}
+.legende li{display:flex;align-items:center;gap:.45rem}
+.legende i{width:14px;height:14px;border-radius:3px;display:inline-block;flex:none}
+.legende .l-ebike{background:var(--signal-dunkel)}
+.legende .l-rest{background:var(--stahl-hell)}
+.legende .l-band{background:#FFF6EF;border:1px solid #F0C9AF}
+.legende .l-fokus{background:var(--signal)}
+.d-quelle{font-size:.82rem;color:var(--stahl);margin-top:.6rem}
+/* Daten anzeigen */
+details.daten{margin-top:.8rem}
+details.daten summary{
+  display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.35rem .9rem;cursor:pointer;
+  border:1.5px solid var(--anthrazit);border-radius:6px;font-weight:600;font-size:.95rem;list-style:none;
+}
+details.daten summary::-webkit-details-marker{display:none}
+details.daten summary::before{content:"";width:.5rem;height:.5rem;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .15s}
+details.daten[open] summary::before{transform:rotate(45deg)}
+details.daten summary:hover{background:var(--hellstahl)}
+details.daten summary:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+details.daten .tabelle-scroll{margin-top:.7rem}
+@media(prefers-reduced-motion:reduce){details.daten summary::before{transition:none}}
+/* Windows-Kontrastmodus: Balken in Textfarbe, Band als Umriss */
+@media(forced-colors:active){
+  .d-balken,.d-fokus,.d-ebike{fill:CanvasText}
+  .d-rest{fill:GrayText}
+  .d-band{fill:Canvas;stroke:CanvasText}
+  .d-innen{fill:Canvas}
+  .d-wert,.d-jahr,.d-kat,.d-notiz{fill:CanvasText}
+}
+
+/* ---------- Druck der neuen Bausteine ---------- */
+@media print{
+  .aktuell-band,.nur-bildschirm,.presse-filter,.presse-zahl,.direktlink,.themen-links,details.daten summary{display:none !important}
+  .presse-meldung:target{box-shadow:none}
+  .presse-kopf{border-radius:0}
+  .zeitung{box-shadow:none;border:0;padding:0;max-width:none}
+  .diagramm,.zeitung .kurz,.zeitung .lokal{break-inside:avoid}
+  /* Konjunkturmonitor und Außenhandel: Überschrift, Einleitung und Diagramm bleiben als ein Block zusammen */
+  #konjunktur,#aussenhandel{break-inside:avoid}
+  /* Newsroom beginnt auf einer neuen Seite, damit der Pressekopf nicht allein am Seitenende steht */
+  #presse{break-before:page}
+  /* news.html: Hero fällt weg, die Zeitung beginnt auf Seite 1 */
+  body:has(.zeitung) .hero{display:none}
+  /* Druck A4: Konjunkturmonitor als 2 x 2 auf einer Seite, Einzeldiagramme höchstens 12 cm breit */
+  .diagramm-gitter{grid-template-columns:1fr 1fr !important;gap:.4rem 1rem}
+  .diagramm>svg{max-width:12cm}
+  .diagramm{box-shadow:none}
+  /* Zeitung im Druck immer zweispaltig, Titelseite passt auf eine A4-Seite */
+  .zeitung-raster{grid-template-columns:2fr 1fr !important}
+  .zeitung-raster>aside{border-left:1px solid #1A1A1A !important;padding-left:1.2rem !important;border-top:0 !important;margin-top:0 !important;padding-top:0 !important}
+  .nur-bildschirm{display:none !important}
+  .zeitung{break-inside:avoid;font-size:15px}
+  .zeitung .spalten{columns:2;font-size:14.5px}
+  .zeitung-titel{font-size:3.4rem}
+  .zeitung .schlagzeile{font-size:2rem}
+  /* Graustufendruck: übrige Fahrräder zusätzlich schraffiert */
+  .d-rest{fill:url(#schraffur-rest)}
+}
+
+/* Keine automatische Silbentrennung in Überschriften von Zeitung und Newsroom */
+.zeitung .schlagzeile,.zeitung .unterzeile,.zeitung .kurz h3,.presse-meldung h3,#presse h2{hyphens:manual}

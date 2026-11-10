@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" sizes="88x88" href="bilder/logo-88.png">
 <script src="menue.js" defer></script>
+<script src="presse-filter.js" defer></script>
 </head>
 <body>
 
@@ -78,7 +79,14 @@
   <section id="markt">
     <h2>Der deutsche Fahrradmarkt</h2>
     <div class="zwei-spalten">
-      <div>
+      <figure class="diagramm">
+        <h3>Fahrradabsatz und E-Bike-Anteil</h3>
+        <p class="diagramm-unter">Absatz in Mio. Stück, Anteil der E-Bikes in %</p>
+        <ul class="legende" aria-hidden="true"><li><i class="l-ebike"></i>E-Bikes</li><li><i class="l-rest"></i>übrige Fahrräder</li></ul>
+        <svg viewBox="0 0 320 236" role="img" aria-labelledby="t-markt d-markt"><title id="t-markt">Fahrradabsatz in Deutschland 2021 bis 2025, in Mio. Stück, mit Anteil der E-Bikes</title><desc id="d-markt">2021: 4,7 Mio. Stück, davon 42&nbsp;% E-Bikes; 2022: 4,6 Mio. Stück, davon 48&nbsp;% E-Bikes; 2023: 4,0 Mio. Stück, davon 53&nbsp;% E-Bikes; 2024: 4,2 Mio. Stück, davon 55&nbsp;% E-Bikes; 2025: 4,4 Mio. Stück, davon 58&nbsp;% E-Bikes. Der Anteil der E-Bikes steigt jedes Jahr.</desc><defs><pattern id="schraffur-rest" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#C9D0D4"/><line x1="0" y1="0" x2="0" y2="6" stroke="#5B6770" stroke-width="2"/></pattern></defs><rect class="d-ebike" x="28.0" y="134.5" width="40" height="65.5"><title>2021: E-Bike-Anteil 42&nbsp;%</title></rect><path class="d-rest" d="M28.0,132.5V48.0Q28.0,44.0 32.0,44.0H64.0Q68.0,44.0 68.0,48.0V132.5Z"><title>2021: Absatz gesamt 4,7 Mio. Stück</title></path><text class="d-innen" x="48.0" y="190.0" text-anchor="middle">42&nbsp;%</text><text class="d-wert" x="48.0" y="37.0" text-anchor="middle">4,7</text><text class="d-jahr" x="48.0" y="226" text-anchor="middle">2021</text><rect class="d-ebike" x="84.0" y="126.7" width="40" height="73.3"><title>2022: E-Bike-Anteil 48&nbsp;%</title></rect><path class="d-rest" d="M84.0,124.7V51.3Q84.0,47.3 88.0,47.3H120.0Q124.0,47.3 124.0,51.3V124.7Z"><title>2022: Absatz gesamt 4,6 Mio. Stück</title></path><text class="d-innen" x="104.0" y="190.0" text-anchor="middle">48&nbsp;%</text><text class="d-wert" x="104.0" y="40.3" text-anchor="middle">4,6</text><text class="d-jahr" x="104.0" y="226" text-anchor="middle">2022</text><rect class="d-ebike" x="140.0" y="129.6" width="40" height="70.4"><title>2023: E-Bike-Anteil 53&nbsp;%</title></rect><path class="d-rest" d="M140.0,127.6V71.2Q140.0,67.2 144.0,67.2H176.0Q180.0,67.2 180.0,71.2V127.6Z"><title>2023: Absatz gesamt 4,0 Mio. Stück</title></path><text class="d-innen" x="160.0" y="190.0" text-anchor="middle">53&nbsp;%</text><text class="d-wert" x="160.0" y="60.2" text-anchor="middle">4,0</text><text class="d-jahr" x="160.0" y="226" text-anchor="middle">2023</text><rect class="d-ebike" x="196.0" y="123.3" width="40" height="76.7"><title>2024: E-Bike-Anteil 55&nbsp;%</title></rect><path class="d-rest" d="M196.0,121.3V64.6Q196.0,60.6 200.0,60.6H232.0Q236.0,60.6 236.0,64.6V121.3Z"><title>2024: Absatz gesamt 4,2 Mio. Stück</title></path><text class="d-innen" x="216.0" y="190.0" text-anchor="middle">55&nbsp;%</text><text class="d-wert" x="216.0" y="53.6" text-anchor="middle">4,2</text><text class="d-jahr" x="216.0" y="226" text-anchor="middle">2024</text><rect class="d-ebike" x="252.0" y="115.3" width="40" height="84.7"><title>2025: E-Bike-Anteil 58&nbsp;%</title></rect><path class="d-rest" d="M252.0,113.3V57.9Q252.0,53.9 256.0,53.9H288.0Q292.0,53.9 292.0,57.9V113.3Z"><title>2025: Absatz gesamt 4,4 Mio. Stück</title></path><text class="d-innen" x="272.0" y="190.0" text-anchor="middle">58&nbsp;%</text><text class="d-wert" x="272.0" y="46.9" text-anchor="middle">4,4</text><text class="d-jahr" x="272.0" y="226" text-anchor="middle">2025</text><line class="d-basis" x1="20" x2="300" y1="200" y2="200"/></svg>
+        <p class="d-quelle">Quelle: Verband der Fahrradindustrie West e.&nbsp;V., fiktiv. Den Ø-Verkaufspreis zeigt die Tabelle.</p>
+        <details class="daten">
+        <summary>Daten anzeigen</summary>
         <div class="tabelle-scroll">
         <table>
           <caption>Branchendaten (Verband der Fahrradindustrie West e.&nbsp;V., fiktiv)</caption>
@@ -92,10 +100,11 @@
           </tbody>
         </table>
         </div>
-      </div>
+      </details>
+      </figure>
       <div class="karte">
         <h3>Nachfrage ist nicht gleich Nachfrage</h3>
-        <p>Die Nachfrage reagiert je nach Produkt unterschiedlich auf Preisänderungen: Beim Kinderrad »Flitzer« (195 €) führt eine Preiserhöhung kaum zu Absatzrückgängen – Eltern brauchen das Rad zur Einschulung (<b>unelastische Nachfrage</b>). Beim E-Trail »Emscher« (2.850 €) verschieben viele Kunden den Kauf dagegen sofort, wenn der Preis steigt (<b>elastische Nachfrage</b>) – das Rad ist verzichtbar oder durch günstigere Modelle ersetzbar.</p>
+        <p>Die Nachfrage reagiert je nach Produkt unterschiedlich auf Preisänderungen. Beim Kinderrad „Flitzer“ (195&nbsp;€) führt eine Preiserhöhung kaum zu Absatzrückgängen. Eltern brauchen das Rad zur Einschulung (<b>unelastische Nachfrage</b>). Beim E-Trail „Emscher“ (2.850&nbsp;€) verschieben viele Kunden den Kauf dagegen sofort, wenn der Preis steigt (<b>elastische Nachfrage</b>). Das Rad ist verzichtbar oder durch günstigere Modelle ersetzbar.</p>
       </div>
     </div>
   </section>
@@ -116,25 +125,40 @@
       </tbody>
     </table>
     </div>
+    <p style="margin-top:.8rem">Die Umsätze stammen aus der Zeit vor dem Zusammenschluss. Seit November 2026 treten NordRad und Cyclonix gemeinsam als NordRad-Cyclonix auf, mit zusammen rund 430 Mio. € Umsatz (<a href="#presse-2026-11-nordrad-cyclonix">zur Meldung</a>).</p>
   </section>
 
   <!-- ===== KONJUNKTUR ===== -->
   <section id="konjunktur">
     <h2>Konjunkturmonitor</h2>
-    <p style="margin-bottom:1rem">Die Geschäftsentwicklung von Velowerk hängt eng mit der gesamtwirtschaftlichen Lage zusammen – besonders sichtbar im Abschwungjahr 2023:</p>
-    <div class="tabelle-scroll">
-    <table>
+    <p style="margin-bottom:1rem">Im Abschwungjahr 2023 schrumpft die deutsche Wirtschaft. Auch der Umsatz von Velowerk sinkt. Danach wächst die Gesamtwirtschaft kaum noch, Velowerk dagegen deutlich. Ein Grund ist die steigende Nachfrage nach Pedelecs.</p>
+    <figure class="diagramm">
+      <h3>Velowerk und Gesamtwirtschaft 2021 bis 2025</h3>
+      <p class="diagramm-unter">Vier Kennzahlen mit eigener Skala, gleiche Zeitachse</p>
+      <ul class="legende" aria-hidden="true"><li><i class="l-band"></i>2023: Abschwungjahr</li></ul>
+      <div class="diagramm-gitter">
+        <div><p class="panel-titel">Umsatz Velowerk<span>in Mio. €</span></p><svg viewBox="0 0 320 196" role="img" aria-labelledby="t-umsatz d-umsatz"><title id="t-umsatz">Umsatz Velowerk, in Mio. €, 2021 bis 2025</title><desc id="d-umsatz">2021: 5,40, 2022: 6,10, 2023: 5,80, 2024: 6,45, 2025: 7,24. Das Jahr 2023 ist hervorgehoben.</desc><rect class="d-band" x="134" y="12" width="52" height="184" rx="4"/><path class="d-balken" d="M35.0,160.0V76.2Q35.0,72.2 39.0,72.2H57.0Q61.0,72.2 61.0,76.2V160.0Z"><title>2021: 5,40</title></path><text class="d-wert" x="48.0" y="65.2" text-anchor="middle">5,40</text><text class="d-jahr" x="48.0" y="190" text-anchor="middle">2021</text><path class="d-balken" d="M91.0,160.0V64.9Q91.0,60.9 95.0,60.9H113.0Q117.0,60.9 117.0,64.9V160.0Z"><title>2022: 6,10</title></path><text class="d-wert" x="104.0" y="53.9" text-anchor="middle">6,10</text><text class="d-jahr" x="104.0" y="190" text-anchor="middle">2022</text><path class="d-fokus" d="M147.0,160.0V69.8Q147.0,65.8 151.0,65.8H169.0Q173.0,65.8 173.0,69.8V160.0Z"><title>2023: 5,80</title></path><text class="d-wert stark" x="160.0" y="58.8" text-anchor="middle">5,80</text><text class="d-jahr stark" x="160.0" y="190" text-anchor="middle">2023</text><path class="d-balken" d="M203.0,160.0V59.2Q203.0,55.2 207.0,55.2H225.0Q229.0,55.2 229.0,59.2V160.0Z"><title>2024: 6,45</title></path><text class="d-wert" x="216.0" y="48.2" text-anchor="middle">6,45</text><text class="d-jahr" x="216.0" y="190" text-anchor="middle">2024</text><path class="d-balken" d="M259.0,160.0V46.3Q259.0,42.3 263.0,42.3H281.0Q285.0,42.3 285.0,46.3V160.0Z"><title>2025: 7,24</title></path><text class="d-wert" x="272.0" y="35.3" text-anchor="middle">7,24</text><text class="d-jahr" x="272.0" y="190" text-anchor="middle">2025</text><line class="d-basis" x1="20" x2="300" y1="160.0" y2="160.0"/></svg></div>
+        <div><p class="panel-titel">BIP-Wachstum Deutschland<span>real, in %</span></p><svg viewBox="0 0 320 196" role="img" aria-labelledby="t-bip d-bip"><title id="t-bip">BIP-Wachstum Deutschland, real, in %, 2021 bis 2025</title><desc id="d-bip">2021: 4,0&nbsp;%, 2022: 1,9&nbsp;%, 2023: −1,0&nbsp;%, 2024: 0,0&nbsp;%, 2025: 0,2&nbsp;%. Das Jahr 2023 ist hervorgehoben.</desc><rect class="d-band" x="134" y="12" width="52" height="184" rx="4"/><path class="d-balken" d="M35.0,127.5V44.8Q35.0,40.8 39.0,40.8H57.0Q61.0,40.8 61.0,44.8V127.5Z"><title>2021: +4,0&nbsp;%</title></path><text class="d-wert" x="48.0" y="33.8" text-anchor="middle">+4,0&nbsp;%</text><text class="d-jahr" x="48.0" y="190" text-anchor="middle">2021</text><path class="d-balken" d="M91.0,127.5V90.3Q91.0,86.3 95.0,86.3H113.0Q117.0,86.3 117.0,90.3V127.5Z"><title>2022: +1,9&nbsp;%</title></path><text class="d-wert" x="104.0" y="79.3" text-anchor="middle">+1,9&nbsp;%</text><text class="d-jahr" x="104.0" y="190" text-anchor="middle">2022</text><path class="d-fokus" d="M147.0,127.5V145.2Q147.0,149.2 151.0,149.2H169.0Q173.0,149.2 173.0,145.2V127.5Z"><title>2023: −1,0&nbsp;%</title></path><text class="d-wert stark" x="160.0" y="165.2" text-anchor="middle">−1,0&nbsp;%</text><text class="d-jahr stark" x="160.0" y="190" text-anchor="middle">2023</text><text class="d-wert" x="216.0" y="120.5" text-anchor="middle">0,0&nbsp;%</text><text class="d-jahr" x="216.0" y="190" text-anchor="middle">2024</text><rect class="d-balken" x="259.0" y="123.2" width="26" height="4.3"><title>2025: +0,2&nbsp;%</title></rect><text class="d-wert" x="272.0" y="116.2" text-anchor="middle">+0,2&nbsp;%</text><text class="d-jahr" x="272.0" y="190" text-anchor="middle">2025</text><line class="d-basis" x1="20" x2="300" y1="127.5" y2="127.5"/><text class="d-notiz" x="16" y="131.5" text-anchor="end">0</text></svg></div>
+        <div><p class="panel-titel">Inflationsrate<span>in %</span></p><svg viewBox="0 0 320 196" role="img" aria-labelledby="t-inflation d-inflation"><title id="t-inflation">Inflationsrate, in %, 2021 bis 2025</title><desc id="d-inflation">2021: 3,1&nbsp;%, 2022: 6,9&nbsp;%, 2023: 5,9&nbsp;%, 2024: 2,2&nbsp;%, 2025: 2,2&nbsp;%. Das Jahr 2023 ist hervorgehoben.</desc><rect class="d-band" x="134" y="12" width="52" height="184" rx="4"/><path class="d-balken" d="M35.0,160.0V113.6Q35.0,109.6 39.0,109.6H57.0Q61.0,109.6 61.0,113.6V160.0Z"><title>2021: 3,1&nbsp;%</title></path><text class="d-wert" x="48.0" y="102.6" text-anchor="middle">3,1&nbsp;%</text><text class="d-jahr" x="48.0" y="190" text-anchor="middle">2021</text><path class="d-balken" d="M91.0,160.0V51.9Q91.0,47.9 95.0,47.9H113.0Q117.0,47.9 117.0,51.9V160.0Z"><title>2022: 6,9&nbsp;%</title></path><text class="d-wert" x="104.0" y="40.9" text-anchor="middle">6,9&nbsp;%</text><text class="d-jahr" x="104.0" y="190" text-anchor="middle">2022</text><path class="d-fokus" d="M147.0,160.0V68.1Q147.0,64.1 151.0,64.1H169.0Q173.0,64.1 173.0,68.1V160.0Z"><title>2023: 5,9&nbsp;%</title></path><text class="d-wert stark" x="160.0" y="57.1" text-anchor="middle">5,9&nbsp;%</text><text class="d-jahr stark" x="160.0" y="190" text-anchor="middle">2023</text><path class="d-balken" d="M203.0,160.0V128.2Q203.0,124.2 207.0,124.2H225.0Q229.0,124.2 229.0,128.2V160.0Z"><title>2024: 2,2&nbsp;%</title></path><text class="d-wert" x="216.0" y="117.2" text-anchor="middle">2,2&nbsp;%</text><text class="d-jahr" x="216.0" y="190" text-anchor="middle">2024</text><path class="d-balken" d="M259.0,160.0V128.2Q259.0,124.2 263.0,124.2H281.0Q285.0,124.2 285.0,128.2V160.0Z"><title>2025: 2,2&nbsp;%</title></path><text class="d-wert" x="272.0" y="117.2" text-anchor="middle">2,2&nbsp;%</text><text class="d-jahr" x="272.0" y="190" text-anchor="middle">2025</text><line class="d-basis" x1="20" x2="300" y1="160.0" y2="160.0"/></svg></div>
+        <div><p class="panel-titel">Geschäftsklima Fahrradbranche<span>Index, 100 = neutral</span></p><svg viewBox="0 0 320 196" role="img" aria-labelledby="t-klima d-klima"><title id="t-klima">Geschäftsklima Fahrradbranche, Index, 100 = neutral, 2021 bis 2025</title><desc id="d-klima">2021: 108, 2022: 103, 2023: 91, 2024: 99, 2025: 106. Das Jahr 2023 ist hervorgehoben.</desc><rect class="d-band" x="134" y="12" width="52" height="184" rx="4"/><path class="d-balken" d="M35.0,87.8V53.3Q35.0,49.3 39.0,49.3H57.0Q61.0,49.3 61.0,53.3V87.8Z"><title>2021: 108</title></path><text class="d-wert" x="48.0" y="42.3" text-anchor="middle">108</text><text class="d-jahr" x="48.0" y="190" text-anchor="middle">2021</text><path class="d-balken" d="M91.0,87.8V77.3Q91.0,73.3 95.0,73.3H113.0Q117.0,73.3 117.0,77.3V87.8Z"><title>2022: 103</title></path><text class="d-wert" x="104.0" y="66.3" text-anchor="middle">103</text><text class="d-jahr" x="104.0" y="190" text-anchor="middle">2022</text><path class="d-fokus" d="M147.0,87.8V127.1Q147.0,131.1 151.0,131.1H169.0Q173.0,131.1 173.0,127.1V87.8Z"><title>2023: 91</title></path><text class="d-wert stark" x="160.0" y="147.1" text-anchor="middle">91</text><text class="d-jahr stark" x="160.0" y="190" text-anchor="middle">2023</text><rect class="d-balken" x="203.0" y="87.8" width="26" height="4.8"><title>2024: 99</title></rect><text class="d-wert" x="216.0" y="108.6" text-anchor="middle">99</text><text class="d-jahr" x="216.0" y="190" text-anchor="middle">2024</text><path class="d-balken" d="M259.0,87.8V62.9Q259.0,58.9 263.0,58.9H281.0Q285.0,58.9 285.0,62.9V87.8Z"><title>2025: 106</title></path><text class="d-wert" x="272.0" y="51.9" text-anchor="middle">106</text><text class="d-jahr" x="272.0" y="190" text-anchor="middle">2025</text><line class="d-basis" x1="20" x2="300" y1="87.8" y2="87.8"/><text class="d-notiz" x="16" y="91.8" text-anchor="end">100</text></svg></div>
+      </div>
+      <p class="d-quelle">Geschäftsklima: Indexwert, 100 = neutrale Stimmung, über 100 = überwiegend optimistische Erwartungen (Befragung des Branchenverbands, fiktiv). Echte Werte: BIP-Wachstum preisbereinigt, nicht kalenderbereinigt (Destatis, Pressemitteilung Nr. 269 vom 30. Juli 2026). Inflationsrate (Destatis, Verbraucherpreisindex, Jahreswerte). Umsatz und Geschäftsklima gehören zur fiktiven Modellwelt.</p>
+      <details class="daten">
+        <summary>Daten anzeigen</summary>
+        <div class="tabelle-scroll">
+        <table>
       <thead><tr><th>Jahr</th><th class="zahl">Umsatz Velowerk<br>(Mio. €)</th><th class="zahl">BIP-Wachstum<br>Deutschland (real)</th><th class="zahl">Inflationsrate</th><th class="zahl">Geschäftsklima<br>Fahrradbranche*</th></tr></thead>
       <tbody>
-        <tr><td>2021</td><td class="zahl">5,40</td><td class="zahl">+2,9 %</td><td class="zahl">3,1 %</td><td class="zahl">108</td></tr>
-        <tr><td>2022</td><td class="zahl">6,10</td><td class="zahl">+1,4 %</td><td class="zahl">6,9 %</td><td class="zahl">103</td></tr>
-        <tr><td>2023</td><td class="zahl">5,80</td><td class="zahl">−0,1 %</td><td class="zahl">5,9 %</td><td class="zahl">91</td></tr>
-        <tr><td>2024</td><td class="zahl">6,45</td><td class="zahl">+0,8 %</td><td class="zahl">2,2 %</td><td class="zahl">99</td></tr>
-        <tr><td>2025</td><td class="zahl">7,24</td><td class="zahl">+1,6 %</td><td class="zahl">2,2 %</td><td class="zahl">106</td></tr>
+        <tr><td>2021</td><td class="zahl">5,40</td><td class="zahl">+4,0 %</td><td class="zahl">3,1 %</td><td class="zahl">108</td></tr>
+        <tr><td>2022</td><td class="zahl">6,10</td><td class="zahl">+1,9 %</td><td class="zahl">6,9 %</td><td class="zahl">103</td></tr>
+        <tr><td>2023</td><td class="zahl">5,80</td><td class="zahl">−1,0 %</td><td class="zahl">5,9 %</td><td class="zahl">91</td></tr>
+        <tr><td>2024</td><td class="zahl">6,45</td><td class="zahl">0,0 %</td><td class="zahl">2,2 %</td><td class="zahl">99</td></tr>
+        <tr><td>2025</td><td class="zahl">7,24</td><td class="zahl">+0,2 %</td><td class="zahl">2,2 %</td><td class="zahl">106</td></tr>
       </tbody>
     </table>
-    </div>
-    <p style="font-size:.85rem;color:var(--stahl);margin-top:.5rem">* Indexwert, 100 = neutrale Stimmung; über 100 = überwiegend optimistische Erwartungen (Befragung des Branchenverbands, fiktiv). Alle volkswirtschaftlichen Daten sind für Unterrichtszwecke frei erfunden bzw. vereinfacht.</p>
+        </div>
+      </details>
+    </figure>
   </section>
 
   <!-- ===== PRODUKTIONSFAKTOREN ===== -->
@@ -202,7 +226,13 @@
         </table>
         </div>
       </div>
-      <div>
+      <figure class="diagramm">
+        <h3>Federgabel, Listenpreis 240 USD</h3>
+        <p class="diagramm-unter">Preis in Euro bei drei Wechselkursen</p>
+        <svg viewBox="0 0 320 178" role="img" aria-labelledby="t-kurs d-kurs"><title id="t-kurs">Preis einer Federgabel in Euro bei drei Wechselkursen, Listenpreis 240 USD</title><desc id="d-kurs">1&nbsp;€ = 1,05 USD: 228,57&nbsp;€; 1&nbsp;€ = 1,12 USD: 214,29&nbsp;€; 1&nbsp;€ = 1,20 USD: 200,00&nbsp;€. Je stärker der Euro, desto weniger kostet die Federgabel in Euro.</desc><text class="d-kat" x="2" y="20">1&nbsp;€ = 1,05 USD <tspan class="d-notiz">(schwacher Euro)</tspan></text><path class="d-balken" d="M2,28H208.3Q212.3,28 212.3,32V46Q212.3,50 208.3,50H2Z"><title>1&nbsp;€ = 1,05 USD: 228,57&nbsp;€</title></path><text class="d-wert" x="218.3" y="44">228,57&nbsp;€</text><text class="d-kat" x="2" y="76">1&nbsp;€ = 1,12 USD</text><path class="d-balken" d="M2,84H195.1Q199.1,84 199.1,88V102Q199.1,106 195.1,106H2Z"><title>1&nbsp;€ = 1,12 USD: 214,29&nbsp;€</title></path><text class="d-wert" x="205.1" y="100">214,29&nbsp;€</text><text class="d-kat" x="2" y="132">1&nbsp;€ = 1,20 USD <tspan class="d-notiz">(starker Euro)</tspan></text><path class="d-balken" d="M2,140H182.0Q186.0,140 186.0,144V158Q186.0,162 182.0,162H2Z"><title>1&nbsp;€ = 1,20 USD: 200,00&nbsp;€</title></path><text class="d-wert" x="192.0" y="156">200,00&nbsp;€</text></svg>
+        <p style="font-size:.95rem;margin-top:.6rem">Ein <b>starker Euro verbilligt unsere Importe</b>. Er schwächt aber zugleich die Wettbewerbsposition unserer Exporte in die Schweiz.</p>
+        <details class="daten">
+        <summary>Daten anzeigen</summary>
         <div class="tabelle-scroll">
         <table>
           <caption>Rechenbeispiel: Federgabel, Listenpreis 240 USD</caption>
@@ -214,44 +244,84 @@
           </tbody>
         </table>
         </div>
-        <p style="font-size:.9rem;margin-top:.6rem">Ein <b>starker Euro verbilligt unsere Importe</b> – schwächt aber zugleich die Wettbewerbsposition unserer Exporte in die Schweiz.</p>
-      </div>
+      </details>
+      </figure>
     </div>
   </section>
 
   <!-- ===== PRESSEMITTEILUNGEN ===== -->
-  <section id="presse">
-    <h2>Pressemitteilungen</h2>
-    <article class="karte presse-meldung" id="presse-2026-10-strompreis">
-      <h3>Strom wird teurer: Ökostromtarif steigt zum 1. Januar um 18 %</h3>
-      <p class="presse-datum">Essen, 8. Oktober 2026</p>
-      <p>Der Energieversorger der Velowerk hat für 2027 einen um 18 % höheren Arbeitspreis angekündigt. Die Photovoltaik-Anlage auf der Zechenhalle deckt rund 35 % des Strombedarfs, den Rest kauft Velowerk als Ökostrom zu. Besonders energieintensiv sind Lackieranlage und Schweißroboter. Bundesweit lagen die Energiepreise im September laut Statistischem Bundesamt um 14,9 % über dem Vorjahresmonat. Geschäftsführer Martin Frank: „Zusammen mit dem Tarifabschluss summieren sich die Mehrkosten. Wir prüfen, ob wir die Preisliste 2027 anpassen müssen.“</p>
-    </article>
-    <article class="karte presse-meldung" id="presse-2026-06-ezb">
-      <h3>EZB erhöht die Leitzinsen: Velowerk verschiebt Investition in neue Lackieranlage</h3>
-      <p class="presse-datum">Essen, 18. Juni 2026</p>
-      <p>Die Europäische Zentralbank (EZB) hat ihre Leitzinsen zum 17. Juni erhöht. Der Hauptrefinanzierungssatz steigt auf 2,40 %, der Einlagesatz von 2,00 % auf 2,25 %. Die EZB will damit die gestiegene Inflation bremsen. Für Unternehmen werden Kredite teurer. Geschäftsführer Martin Frank: „Eine automatisierte Lackieranlage für rund 350.000 € hätten wir gern noch in diesem Jahr angeschafft. Bei höheren Zinsen rechnen wir die Finanzierung neu durch.“ Die Gesellschafterversammlung hat die Entscheidung deshalb vertagt.</p>
-    </article>
-    <article class="karte presse-meldung" id="presse-2026-04-us-zoelle">
-      <h3>Neue US-Zölle: Federgabeln aus Portland werden 15 % teurer</h3>
-      <p class="presse-datum">Essen, 3. April 2026</p>
-      <p>Handelspolitische Spannungen treffen die Lieferkette: Auf Fahrradkomponenten aus den USA wird künftig ein zusätzlicher Einfuhrzoll erhoben. Velowerk prüft den Wechsel zu einem europäischen Federgabel-Hersteller – Einkaufsleiter Murat Aydın verhandelt bereits mit zwei Anbietern aus Deutschland und Italien.</p>
-    </article>
-    <article class="karte presse-meldung" id="presse-2026-02-tarifabschluss">
-      <h3>Tarifabschluss in der Metallbranche: 4,2 % mehr Lohn</h3>
-      <p class="presse-datum">Essen, 20. Februar 2026</p>
-      <p>Der neue Tarifvertrag erhöht die Personalkosten von Velowerk um rund 100.000 € jährlich. Die Geschäftsführung prüft, ob die Mehrkosten über Produktivitätssteigerungen aufgefangen werden können oder in die Preisliste 2027 einfließen müssen. Betriebsratsvorsitzende Rita Hofmann begrüßt den Abschluss: „Gute Arbeit verdient gute Bezahlung.“</p>
-    </article>
-    <article class="karte presse-meldung" id="presse-2026-01-pedelec-foerderung">
-      <h3>Stadt Essen fördert Pedelec-Kauf mit 300 € – Nachfrage nach »Zollverein« zieht kräftig an</h3>
-      <p class="presse-datum">Essen, 15. Januar 2026</p>
-      <p>Das neue kommunale Förderprogramm für klimafreundliche Mobilität zeigt Wirkung: Die Bestellungen des E-City »Zollverein« liegen 40 % über dem Vorjahresmonat. Die Subvention verschiebt die Nachfrage spürbar – Vertriebsleiterin Julia Brandt rechnet mit Lieferzeiten von bis zu sechs Wochen.</p>
-    </article>
-    <article class="karte presse-meldung" id="presse-2025-12-fusion">
-      <h3>Geplante Fusion von NordRad und Cyclonix – Bundeskartellamt prüft</h3>
-      <p class="presse-datum">Essen, 10. Dezember 2025</p>
-      <p>Die beiden größten Wettbewerber wollen sich zusammenschließen und kämen im E-Bike-Segment gemeinsam auf über 40 % Marktanteil. Das Bundeskartellamt hat ein Prüfverfahren nach dem Gesetz gegen Wettbewerbsbeschränkungen (GWB) eingeleitet. Geschäftsführer Martin Frank: „Für mittelständische Hersteller wie uns ist funktionierender Wettbewerb überlebenswichtig.“</p>
-    </article>
+  <section id="presse" aria-labelledby="presse-titel">
+    <div class="eyebrow" style="color:var(--signal-dunkel)">Newsroom</div>
+    <h2 id="presse-titel">Pressemitteilungen</h2>
+
+    <div class="presse-kopf">
+      <div class="presse-absender">
+        <img src="bilder/logo-88.png" width="48" height="48" alt="">
+        <div><b>Velowerk Ruhr GmbH</b><span>Unternehmenskommunikation</span></div>
+      </div>
+      <p class="presse-kontakt"><b>Pressekontakt</b><br>Helenenstraße 12 · 45143 Essen<br>Telefon 0201 8645-0 · info@velowerk-ruhr.de</p>
+    </div>
+
+    <ul class="presse-filter" aria-label="Meldungen nach Thema filtern" hidden></ul>
+    <p class="presse-zahl" aria-live="polite" hidden></p>
+
+    <div data-presse-liste>
+<article class="karte presse-meldung" id="presse-2026-11-auslastung" data-thema="produktion">
+  <div class="presse-zeile"><span class="presse-art">Pressemitteilung</span><span class="etikett">Produktion</span></div>
+  <h3>Montage fast voll ausgelastet: Lieferzeit für Pedelecs bis zu sechs Wochen</h3>
+  <p><time class="ortsmarke" datetime="2026-11-06">Essen, 6. November 2026.</time> Die Endmontage der Velowerk kann im Monat höchstens 1.000 Räder bauen. Im Oktober 2026 hat sie 960 Räder gebaut. Im Januar waren es 550. Seit dem Start der Förderung der Stadt Essen bestellen die Fachhändler deutlich mehr Pedelecs.</p>
+  <p>Vertriebsleiterin Julia Brandt: „Für den E-City ‚Zollverein‘ müssen Händler zurzeit mit bis zu sechs Wochen Lieferzeit rechnen.“</p>
+  <p class="presse-fuss"><a class="direktlink" href="#presse-2026-11-auslastung">Direktlink zu dieser Meldung</a></p>
+</article>
+<article class="karte presse-meldung branche" id="presse-2026-11-nordrad-cyclonix" data-thema="wettbewerb">
+  <div class="presse-zeile"><span class="presse-art">Aus der Branche</span><span class="etikett">Wettbewerb</span></div>
+  <h3>NordRad-Cyclonix erhöht nach dem Zusammenschluss die Preise</h3>
+  <p><time class="ortsmarke" datetime="2026-11-04">Essen, 4. November 2026.</time> Die beiden größten Wettbewerber der Velowerk haben sich zusammengeschlossen. Gemeinsam haben sie bei E-Bikes einen Marktanteil von über 40&nbsp;%. Zum 1. November hat NordRad-Cyclonix die Preise für alle E-Bikes um 9&nbsp;% erhöht. Nach Angaben des Branchenverbands sind die Kosten der Hersteller im selben Zeitraum nur um etwa 2&nbsp;% gestiegen. Viele Fachhändler haben kaum Alternativen.</p>
+  <p class="presse-fuss"><a class="direktlink" href="#presse-2026-11-nordrad-cyclonix">Direktlink zu dieser Meldung</a></p>
+</article>
+<article class="karte presse-meldung" id="presse-2026-10-strompreis" data-thema="energie">
+  <div class="presse-zeile"><span class="presse-art">Pressemitteilung</span><span class="etikett">Energie</span></div>
+  <h3>Strom wird teurer: Ökostromtarif steigt zum 1. Januar 2027 um 18&nbsp;%</h3>
+  <p><time class="ortsmarke" datetime="2026-10-08">Essen, 8. Oktober 2026.</time> Der Energieversorger der Velowerk hat für 2027 einen um 18&nbsp;% höheren Arbeitspreis angekündigt. Die Photovoltaik-Anlage auf der Zechenhalle deckt rund 35&nbsp;% des Strombedarfs, den Rest kauft Velowerk als Ökostrom zu. Besonders energieintensiv sind Lackieranlage und Schweißroboter. Bundesweit lagen die Energiepreise im September laut Statistischem Bundesamt um 14,9&nbsp;% über dem Vorjahresmonat.</p>
+  <p>Geschäftsführer Martin Frank: „Zusammen mit dem Tarifabschluss summieren sich die Mehrkosten. Wir prüfen, ob wir die Preisliste 2027 anpassen müssen.“</p>
+  <p class="presse-fuss"><a class="direktlink" href="#presse-2026-10-strompreis">Direktlink zu dieser Meldung</a></p>
+</article>
+<article class="karte presse-meldung" id="presse-2026-06-ezb" data-thema="geldpolitik">
+  <div class="presse-zeile"><span class="presse-art">Pressemitteilung</span><span class="etikett">Geldpolitik</span></div>
+  <h3>EZB erhöht die Leitzinsen: Velowerk verschiebt Investition in neue Lackieranlage</h3>
+  <p><time class="ortsmarke" datetime="2026-06-18">Essen, 18. Juni 2026.</time> Die Europäische Zentralbank (EZB) hat ihre Leitzinsen zum 17. Juni erhöht. Der Hauptrefinanzierungssatz steigt auf 2,40&nbsp;%, der Einlagesatz von 2,00&nbsp;% auf 2,25&nbsp;%. Wegen höherer Energiepreise erwartet die EZB für 2026 wieder mehr Inflation. Das will sie bremsen. Für Unternehmen werden Kredite teurer.</p>
+  <p>Geschäftsführer Martin Frank: „Eine automatisierte Lackieranlage für rund 350.000&nbsp;€ hätten wir gern noch in diesem Jahr angeschafft. Bei höheren Zinsen rechnen wir die Finanzierung neu durch.“ Die Gesellschafterversammlung hat die Entscheidung deshalb vertagt.</p>
+  <p class="presse-fuss"><a class="direktlink" href="#presse-2026-06-ezb">Direktlink zu dieser Meldung</a></p>
+</article>
+<article class="karte presse-meldung" id="presse-2026-04-us-zoelle" data-thema="zoll">
+  <div class="presse-zeile"><span class="presse-art">Pressemitteilung</span><span class="etikett">Zoll</span></div>
+  <h3>Neuer Zoll auf Federgabeln aus den USA</h3>
+  <p><time class="ortsmarke" datetime="2026-04-03">Essen, 3. April 2026.</time> Auf Fahrradteile aus den USA wird ein zusätzlicher Zoll fällig. Die Federgabeln aus Portland, die die Velowerk im Mountainbike „Halde Pro“ verbaut, werden dadurch 15&nbsp;% teurer. Velowerk prüft den Wechsel zu einem europäischen Hersteller. Einkaufsleiter Murat Aydın verhandelt bereits mit zwei Herstellern aus Deutschland und Italien.</p>
+  <p class="presse-fuss"><a class="direktlink" href="#presse-2026-04-us-zoelle">Direktlink zu dieser Meldung</a></p>
+</article>
+<article class="karte presse-meldung" id="presse-2026-02-tarifabschluss" data-thema="tarif">
+  <div class="presse-zeile"><span class="presse-art">Pressemitteilung</span><span class="etikett">Tarif</span></div>
+  <h3>Tarifabschluss in der Metallbranche: 4,2&nbsp;% mehr Lohn</h3>
+  <p><time class="ortsmarke" datetime="2026-02-20">Essen, 20. Februar 2026.</time> Der neue Tarifvertrag erhöht die Personalkosten von Velowerk um rund 100.000&nbsp;€ im Jahr. Auch die Ausbildungsvergütungen steigen. Die Geschäftsführung prüft, ob sie die Mehrkosten durch eine bessere Fertigung auffangen kann oder in die Preisliste 2027 einrechnen muss.</p>
+  <p>Betriebsratsvorsitzende Rita Hofmann begrüßt den Abschluss: „Gute Arbeit verdient gute Bezahlung.“</p>
+  <p class="presse-fuss"><a class="direktlink" href="#presse-2026-02-tarifabschluss">Direktlink zu dieser Meldung</a></p>
+</article>
+<article class="karte presse-meldung" id="presse-2026-01-pedelec-foerderung" data-thema="foerderung">
+  <div class="presse-zeile"><span class="presse-art">Pressemitteilung</span><span class="etikett">Förderung</span></div>
+  <h3>Stadt Essen fördert Pedelecs mit 300&nbsp;€</h3>
+  <p><time class="ortsmarke" datetime="2026-01-15">Essen, 15. Januar 2026.</time> Das neue Förderprogramm der Stadt für klimafreundliche Mobilität wirkt. Die Bestellungen für den E-City „Zollverein“ liegen 40&nbsp;% über dem Vorjahresmonat. Die Subvention verschiebt die Nachfrage spürbar. Vertriebsleiterin Julia Brandt rechnet bis zum Herbst mit Lieferzeiten von bis zu sechs Wochen, wenn die Montage ausgelastet ist.</p>
+  <p class="presse-fuss"><a class="direktlink" href="#presse-2026-01-pedelec-foerderung">Direktlink zu dieser Meldung</a></p>
+</article>
+<article class="karte presse-meldung" id="presse-2025-12-fusion" data-thema="wettbewerb">
+  <div class="presse-zeile"><span class="presse-art">Pressemitteilung</span><span class="etikett">Wettbewerb</span></div>
+  <h3>Geplante Fusion von NordRad und Cyclonix: Bundeskartellamt prüft</h3>
+  <p><time class="ortsmarke" datetime="2025-12-10">Essen, 10. Dezember 2025.</time> Die beiden größten Wettbewerber wollen sich zusammenschließen und kämen im E-Bike-Segment gemeinsam auf über 40&nbsp;% Marktanteil. Das Bundeskartellamt hat ein Prüfverfahren nach dem Gesetz gegen Wettbewerbsbeschränkungen (GWB) eingeleitet.</p>
+  <p>Geschäftsführer Martin Frank: „Für mittelständische Hersteller wie uns ist funktionierender Wettbewerb überlebenswichtig.“</p>
+  <p class="presse-fuss"><a class="direktlink" href="#presse-2025-12-fusion">Direktlink zu dieser Meldung</a></p>
+</article>
+    </div>
+
+    <p class="ueber-velowerk"><b>Über die Velowerk Ruhr GmbH:</b> Die Velowerk Ruhr GmbH entwickelt und produziert seit 1996 Fahrräder und Pedelecs auf dem Gelände der ehemaligen Zeche Helene in Essen-Altendorf. Sie beschäftigt 38 Mitarbeiterinnen und Mitarbeiter und verkauft über den Fachhandel. Alle Meldungen sind fiktives Unterrichtsmaterial.</p>
   </section>
 
 </main>
